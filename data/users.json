@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "id": "9d9bdaab-7820-47b1-a05f-ea5a7887ea13",
+      "username": "admin",
+      "displayName": "مدیر کل",
+      "role": "admin",
+      "salt": "f355c225843fa9b5dd6e57a3d8233ed2",
+      "passwordHash": "4d51abe4fd94a0366e75a416a9b40827428c847ebcff231ae19626d55ba2f9fe9050614032628a98fd69a9950ca89f5a6b4868ef4ca01f1e8242a1fa5e401fdf",
+      "createdAt": "2026-11-18T06:21:13.842Z",
+      "perms": [
+        "builder",
+        "blog",
+        "site",
+        "media",
+        "content.write",
+        "leads",
+        "leads.write",
+        "stats",
+        "users.manage"
+      ]
+    }
+  ]
+}

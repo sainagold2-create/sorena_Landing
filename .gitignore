@@ -1,0 +1,11 @@
+fonts/
+posters/
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*
+uploads/leads/
+.vscode/
+.idea/

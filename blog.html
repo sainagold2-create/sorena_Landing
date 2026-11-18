@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>مقالات | سورناگلد</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/samim-font@v4.0.5/dist/font-face.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/shabnam-font@v5.0.1/dist/font-face.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/sahel-font@v3.4.0/dist/font-face.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/tanha-font@v0.9/dist/font-face.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/parastoo-font@v2.0.1/dist/font-face.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/gandom-font@v0.8/dist/font-face.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/nahid-font@v0.3.0/dist/font-face.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/estedad@5.3.0/400.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/estedad@5.3.0/500.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/estedad@5.3.0/600.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/estedad@5.3.0/700.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/estedad@5.3.0/800.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800&family=Almarai:wght@300;400;700;800&family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=Baloo+Bhaijaan+2:wght@400;500;600;700;800&family=Beiruti:wght@300;400;500;600;700;800;900&family=Blaka&family=Cairo:wght@300;400;500;600;700;800;900&family=Changa:wght@300;400;500;600;700;800&family=El+Messiri:wght@400;500;600;700&family=Harmattan:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Katibeh&family=Kufam:wght@400;500;600;700&family=Lalezar&family=Lateef:wght@400;500;600;700;800&family=Lemonada:wght@300;400;500;600;700&family=Mada:wght@300;400;500;600;700;900&family=Marhey:wght@300;400;500;600;700&family=Markazi+Text:wght@400;500;600;700&family=Mirza:wght@400;500;600;700&family=Noto+Kufi+Arabic:wght@300;400;500;600;700;800;900&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700;800;900&family=Rakkas&family=Readex+Pro:wght@300;400;500;600;700&family=Reem+Kufi:wght@400;500;600;700&family=Rubik:wght@300;400;500;600;700;800;900&family=Scheherazade+New:wght@400;500;600;700&family=Tajawal:wght@300;400;500;700;800&display=swap" />
+  <link rel="stylesheet" href="/fonts.css" />
+  <style>
+    :root {
+      --turquoise: #2ec4b6; --night: #062a32; --gold: #e2b657; --cream: #f7f0e3;
+      --font: "Graphik Arabic", Tahoma, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: var(--font); background: var(--night); color: var(--cream); min-height: 100vh;
+      background-image:
+        radial-gradient(ellipse at 90% 0%, rgba(46,196,182,.12), transparent 45%),
+        radial-gradient(ellipse at 0% 100%, rgba(226,182,87,.08), transparent 40%);
+    }
+    a { color: inherit; text-decoration: none; }
+    header {
+      position: sticky; top: 0; z-index: 20;
+      display: flex; justify-content: space-between; align-items: center;
+      max-width: 72rem; margin: 0 auto; padding: 1.1rem 1rem; width: 100%;
+      background: rgba(6,42,50,.88); backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(46,196,182,.15);
+    }
+    .brand { font-size: 1.35rem; font-weight: 700; color: var(--gold); }
+    .brand span { margin-right: .55rem; font-size: .7rem; color: rgba(247,240,227,.6); font-weight: 400; vertical-align: middle; }
+    nav { display: flex; gap: .85rem; align-items: center; font-size: .9rem; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: var(--gold); color: #062a32; font-weight: 600;
+      border-radius: .55rem; padding: .55rem 1rem; border: 0; font-family: inherit;
+    }
+    .btn-nav {
+      padding: .4rem .85rem; font-size: .85rem;
+      background: transparent; color: var(--cream);
+      border: 1px solid rgba(46,196,182,.45);
+    }
+    .btn-nav:hover { background: rgba(46,196,182,.12); }
+    .wrap { max-width: 72rem; margin: 0 auto; padding: 2.5rem 1rem 5rem; }
+    .page-head { margin-bottom: 2rem; }
+    .page-head h1 { margin: 0; color: var(--gold); font-size: clamp(1.8rem, 4vw, 2.6rem); }
+    .page-head p { margin: .8rem 0 0; color: rgba(247,240,227,.7); max-width: 36rem; line-height: 1.8; }
+    .blog-grid {
+      display: grid; gap: 1.1rem;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+    }
+    .blog-card {
+      display: flex; flex-direction: column; gap: 0;
+      overflow: hidden;
+      border: 1px solid rgba(46,196,182,.16);
+      background:
+        radial-gradient(380px circle at 80% 0%, rgba(46,196,182,.1), transparent 45%),
+        rgba(10,53,64,.35);
+      transition: transform .25s ease, border-color .25s ease;
+    }
+    .blog-card:hover { transform: translateY(-3px); border-color: rgba(226,182,87,.4); }
+    .blog-cover {
+      display: block; width: 100%; aspect-ratio: 16 / 10;
+      overflow: hidden; background: rgba(4,30,36,.55);
+      border-bottom: 1px solid rgba(226,182,87,.18);
+    }
+    .blog-cover img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      transition: transform .35s ease;
+    }
+    .blog-card:hover .blog-cover img { transform: scale(1.04); }
+    .blog-cover-fallback {
+      background:
+        radial-gradient(circle at 30% 20%, rgba(226,182,87,.28), transparent 50%),
+        linear-gradient(145deg, #0b3d48, #062a32 60%, #041e24);
+    }
+    .blog-card-body {
+      display: flex; flex-direction: column; gap: .55rem;
+      padding: 1.05rem 1.1rem 1.2rem; flex: 1;
+    }
+    .blog-card time { color: var(--turquoise); font-size: .8rem; }
+    .blog-card h3 { margin: 0; color: var(--cream); font-size: 1.1rem; line-height: 1.5; }
+    .blog-card p { margin: 0; color: rgba(247,240,227,.68); line-height: 1.75; font-size: .95rem; flex: 1; }
+    .blog-more { color: var(--gold); font-size: .85rem; font-weight: 600; }
+    .blog-empty { color: rgba(247,240,227,.6); }
+    .article { max-width: 42rem; }
+    .article .back { color: var(--turquoise); font-size: .9rem; display: inline-block; margin-bottom: 1.4rem; }
+    .article time { color: rgba(247,240,227,.55); font-size: .85rem; }
+    .article h1 { margin: .5rem 0 1rem; color: var(--gold); font-size: clamp(1.7rem, 4vw, 2.4rem); line-height: 1.35; }
+    .article .cover {
+      width: 100%; aspect-ratio: 16 / 9; object-fit: cover;
+      border-radius: .7rem; border: 1px solid rgba(226,182,87,.28);
+      margin: 0 0 1.25rem; display: block;
+    }
+    .article .excerpt { color: rgba(247,240,227,.78); font-size: 1.05rem; line-height: 1.85; margin: 0 0 1.6rem; }
+    .article .body p { color: rgba(247,240,227,.82); line-height: 1.95; margin: 0 0 1.15rem; font-size: 1.02rem; }
+    .missing { color: rgba(247,240,227,.7); }
+    footer {
+      border-top: 1px solid rgba(46,196,182,.2); background: #041e24;
+      padding: 2rem 1rem; text-align: center; color: rgba(247,240,227,.55); font-size: .9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">سورناگلد<span>طلای آبشده مطمئن و شفاف با اعتبار سایناگلد</span></a>
+    <nav>
+      <a href="/">خانه</a>
+      <a href="/blog">مقالات</a>
+      <a class="btn btn-nav" id="navLogin" href="#">ورود</a>
+    </nav>
+  </header>
+
+  <main class="wrap" id="blogRoot"></main>
+
+  <footer>سورناگلد · مقالات بازار طلای آبشده</footer>
+
+  <script type="module">
+    import {
+      publishedPosts,
+      formatPostDate,
+      renderBlogCards,
+      renderPostBody,
+      fontStack,
+      postImageUrl,
+      toFaDigits,
+    } from "/site-render.js";
+
+    function esc(str) {
+      return String(str ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    function fa(str) {
+      return esc(toFaDigits(str));
+    }
+
+    function applyLogin(site = {}) {
+      const link = document.getElementById("navLogin");
+      const label = (site.loginLabel || "ورود").trim() || "ورود";
+      const href = (site.loginUrl || "").trim() || "#";
+      link.textContent = label;
+      link.href = href;
+      if (/^https?:\/\//i.test(href)) link.target = "_blank";
+      else link.removeAttribute("target");
+      const stack = fontStack(site.defaultFont || "Graphik Arabic");
+      document.documentElement.style.setProperty("--font", stack);
+      document.body.style.fontFamily = stack;
+    }
+
+    function slugFromPath() {
+      const parts = location.pathname.replace(/\/+$/, "").split("/").filter(Boolean);
+      if (parts[0] !== "blog") return "";
+      return decodeURIComponent(parts[1] || "");
+    }
+
+    async function boot() {
+      const res = await fetch("/api/content");
+      const content = await res.json();
+      applyLogin(content.site || {});
+      const root = document.getElementById("blogRoot");
+      const slug = slugFromPath();
+      const posts = publishedPosts(content.posts || []);
+
+      if (!slug) {
+        document.title = "مقالات | سورناگلد";
+        root.innerHTML = `
+          <div class="page-head">
+            <h1>مقالات و بلاگ</h1>
+            <p>نکته‌های کوتاه از معاملات طلای آبشده، شفافیت عیار و مسیر همکاری روی اعتبار سایناگلد.</p>
+          </div>
+          ${renderBlogCards(posts)}`;
+        return;
+      }
+
+      const post = posts.find((p) => p.slug === slug);
+      if (!post) {
+        document.title = "مقاله یافت نشد | سورناگلد";
+        root.innerHTML = `
+          <article class="article">
+            <a class="back" href="/blog">← بازگشت به مقالات</a>
+            <p class="missing">این مقاله پیدا نشد یا منتشر نشده است.</p>
+          </article>`;
+        return;
+      }
+
+      const titleF = fontStack(post.titleFont || "Graphik Arabic");
+      const bodyF = fontStack(post.bodyFont || "Graphik Arabic");
+      const cover = postImageUrl(post);
+      document.title = `${post.title} | سورناگلد`;
+      root.innerHTML = `
+        <article class="article">
+          <a class="back" href="/blog">← بازگشت به مقالات</a>
+          ${cover ? `<img class="cover" src="${cover}" alt="" />` : ""}
+          <time style="font-family:${bodyF}">${esc(formatPostDate(post.publishedAt))}</time>
+          <h1 style="font-family:${titleF}">${fa(post.title)}</h1>
+          ${post.excerpt ? `<p class="excerpt" style="font-family:${bodyF}">${fa(post.excerpt)}</p>` : ""}
+          <div class="body" style="font-family:${bodyF}">${renderPostBody(post.body)}</div>
+        </article>`;
+    }
+
+    boot();
+  </script>
+</body>
+</html>

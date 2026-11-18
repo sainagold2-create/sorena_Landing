@@ -1,0 +1,2726 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>سایت‌ساز سورناگلد</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/samim-font@v4.0.5/dist/font-face.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/shabnam-font@v5.0.1/dist/font-face.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/sahel-font@v3.4.0/dist/font-face.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/tanha-font@v0.9/dist/font-face.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/parastoo-font@v2.0.1/dist/font-face.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/gandom-font@v0.8/dist/font-face.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/nahid-font@v0.3.0/dist/font-face.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/estedad@5.3.0/400.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/estedad@5.3.0/500.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/estedad@5.3.0/600.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/estedad@5.3.0/700.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/estedad@5.3.0/800.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800&family=Almarai:wght@300;400;700;800&family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=Baloo+Bhaijaan+2:wght@400;500;600;700;800&family=Beiruti:wght@300;400;500;600;700;800;900&family=Blaka&family=Cairo:wght@300;400;500;600;700;800;900&family=Changa:wght@300;400;500;600;700;800&family=El+Messiri:wght@400;500;600;700&family=Harmattan:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Katibeh&family=Kufam:wght@400;500;600;700&family=Lalezar&family=Lateef:wght@400;500;600;700;800&family=Lemonada:wght@300;400;500;600;700&family=Mada:wght@300;400;500;600;700;900&family=Marhey:wght@300;400;500;600;700&family=Markazi+Text:wght@400;500;600;700&family=Mirza:wght@400;500;600;700&family=Noto+Kufi+Arabic:wght@300;400;500;600;700;800;900&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700;800;900&family=Rakkas&family=Readex+Pro:wght@300;400;500;600;700&family=Reem+Kufi:wght@400;500;600;700&family=Rubik:wght@300;400;500;600;700;800;900&family=Scheherazade+New:wght@400;500;600;700&family=Tajawal:wght@300;400;500;700;800&display=swap" />
+  <link rel="stylesheet" href="/fonts.css" />
+  <style>
+    :root {
+      --turquoise: #2ec4b6; --turquoise-deep: #0f766e; --lapis: #0b3d5c; --night: #062a32;
+      --gold: #e2b657; --gold-deep: #c4922a; --font: "Vazirmatn", Tahoma, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body, input, textarea, select, button {
+      margin: 0; font-family: var(--font); font-size: .9rem;
+    }
+    body { background: #eef7f5; color: #1a1a1a; }
+    .hidden { display: none !important; }
+    #loginView {
+      min-height: 100vh; display: grid; place-items: center; padding: .75rem;
+      background: linear-gradient(160deg, #062a32, #0b3d5c 45%, #0f766e);
+    }
+    .card {
+      background: #fff; border: 1px solid rgba(15,118,110,.12); border-radius: .7rem; padding: .75rem .85rem;
+    }
+    #loginView .card { width: min(400px, 100%); padding: 1rem; }
+    label { display: block; font-size: .76rem; margin: 0 0 .2rem; color: #475569; font-weight: 500; }
+    .field { margin-bottom: .5rem; }
+    input, textarea, select {
+      width: 100%; border: 1px solid rgba(0,0,0,.12); border-radius: .5rem;
+      padding: .4rem .55rem; font: inherit; line-height: 1.35;
+    }
+    textarea { min-height: 4.5rem; resize: vertical; }
+    .btn {
+      background: var(--turquoise-deep); color: #fff; border: 0; border-radius: .5rem;
+      padding: .4rem .7rem; font: inherit; font-weight: 600; cursor: pointer;
+    }
+    .btn.gold { background: var(--gold-deep); }
+    .btn.ghost { background: #fff; color: var(--turquoise-deep); border: 1px solid var(--turquoise-deep); }
+    .btn.danger { background: #b91c1c; }
+    .btn.sm { padding: .28rem .45rem; font-size: .76rem; }
+    .err { color: #b91c1c; font-size: .8rem; }
+    .ok { color: #047857; font-size: .8rem; }
+    header.app {
+      background: linear-gradient(120deg, var(--night), var(--lapis)); color: #fff;
+      padding: .55rem .75rem; display: flex; justify-content: space-between; align-items: center; gap: .65rem;
+    }
+    header.app strong { color: var(--gold); font-size: .92rem; }
+    header.app a, header.app button {
+      color: #fff; background: transparent; border: 1px solid rgba(46,196,182,.4);
+      border-radius: .45rem; padding: .28rem .55rem; cursor: pointer; font: inherit; font-size: .8rem; text-decoration: none;
+    }
+    .layout {
+      display: grid; grid-template-columns: 220px 1fr; min-height: calc(100vh - 86px);
+    }
+    @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } }
+    .sidebar {
+      border-left: 1px solid rgba(15,118,110,.12); background: #fff; padding: .65rem;
+      overflow: auto;
+    }
+    .main { padding: .65rem; overflow: auto; }
+    .sec-item {
+      border: 1px solid rgba(15,118,110,.15); border-radius: .5rem; padding: .45rem .5rem;
+      margin-bottom: .35rem; cursor: grab; background: #f8fffd;
+      display: grid; grid-template-columns: 22px 1fr auto; gap: .35rem; align-items: start;
+      transition: box-shadow .15s, opacity .15s, border-color .15s;
+    }
+    .sec-item:active { cursor: grabbing; }
+    .sec-item.active { border-color: var(--turquoise-deep); background: #e6faf7; }
+    .sec-item.dragging { opacity: .45; }
+    .sec-item.drag-over {
+      border-color: var(--gold-deep);
+      box-shadow: inset 0 2px 0 var(--turquoise);
+    }
+    .sec-item .drag-handle {
+      color: #94a3b8; font-size: 1rem; line-height: 1.1; user-select: none;
+      padding-top: .05rem; cursor: grab;
+    }
+    .sec-item .meta { font-size: .7rem; color: #64748b; margin-top: .1rem; }
+    .sec-item .sec-body { min-width: 0; font-size: .84rem; }
+    .row { display: flex; flex-wrap: wrap; gap: .3rem; align-items: center; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: .45rem; }
+    @media (max-width: 700px) { .grid-2 { grid-template-columns: 1fr; } }
+    h2 { margin: 0 0 .45rem; color: var(--turquoise-deep); font-size: .95rem; }
+    h3 { margin: .7rem 0 .35rem; font-size: .86rem; color: #0b3d5c; }
+    .panel { margin-bottom: .55rem; }
+    .hint, .meta, .help {
+      color: #64748b; font-size: .76rem; margin: 0 0 .45rem; line-height: 1.45;
+    }
+    .style-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .4rem; }
+    @media (max-width: 800px) { .style-grid { grid-template-columns: 1fr 1fr; } }
+    .media-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(88px, 1fr)); gap: .35rem; }
+    .media-grid label {
+      display: block; border: 1px solid rgba(0,0,0,.1); border-radius: .4rem; overflow: hidden;
+      cursor: pointer; position: relative;
+    }
+    .media-grid img { width: 100%; height: 64px; object-fit: cover; display: block; }
+    .media-grid input { position: absolute; top: .25rem; right: .25rem; width: auto; }
+    .tabs {
+      display: flex; gap: .3rem; margin: 0; flex-wrap: wrap;
+      padding: .45rem .65rem .35rem; border-bottom: 1px solid rgba(15,118,110,.1);
+      background: rgba(255,255,255,.65);
+    }
+    .tabs button {
+      border: 1px solid rgba(15,118,110,.18); background: #fff; border-radius: .45rem;
+      padding: .3rem .6rem; cursor: pointer; font: inherit; font-size: .82rem;
+    }
+    .tabs button.active { background: var(--turquoise-deep); color: #fff; }
+    .tab-pane { padding: .65rem; max-width: 1100px; margin: 0 auto; }
+    .tab-pane.wide { max-width: 1180px; }
+    .tab-pane.narrow { max-width: 860px; }
+    #saveMsg:empty { display: none; }
+    #saveMsg { margin: 0 0 .4rem; }
+    .leads-dash {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: .4rem; margin-bottom: .65rem;
+    }
+    @media (max-width: 900px) { .leads-dash { grid-template-columns: 1fr 1fr; } }
+    .leads-stat {
+      background: #f8fffd; border: 1px solid rgba(15,118,110,.12); border-radius: .55rem;
+      padding: .55rem .65rem;
+      cursor: pointer; transition: border-color .15s, box-shadow .15s;
+    }
+    .leads-stat .label { font-size: .72rem; color: #64748b; margin-bottom: .15rem; }
+    .leads-stat .value { font-size: 1.25rem; font-weight: 700; color: var(--turquoise-deep); line-height: 1.1; }
+    .leads-stat.gold .value { color: var(--gold-deep); }
+    .leads-stat.warn .value { color: #b45309; }
+    .leads-stat.ok .value { color: #047857; }
+    .leads-stat.muted .value { color: #64748b; }
+    .leads-stat:hover, .leads-stat.active {
+      border-color: var(--turquoise-deep); box-shadow: 0 0 0 2px rgba(15,118,110,.1);
+    }
+    .leads-chart-wrap { margin-bottom: .55rem; }
+    .leads-chart {
+      display: flex; align-items: flex-end; gap: .25rem; height: 120px;
+      padding: .5rem .25rem .25rem; border: 1px solid rgba(15,118,110,.1);
+      border-radius: .55rem; background: linear-gradient(180deg, #f8fffd, #fff);
+      overflow-x: auto;
+    }
+    .leads-chart-bar {
+      flex: 1 0 1.6rem; min-width: 1.35rem; display: flex; flex-direction: column;
+      align-items: center; justify-content: flex-end; height: 100%; gap: .15rem;
+    }
+    .leads-chart-bar .bar {
+      width: 100%; max-width: 1.6rem; border-radius: .25rem .25rem .1rem .1rem;
+      background: linear-gradient(180deg, var(--turquoise), var(--turquoise-deep));
+      min-height: 2px; transition: height .25s ease;
+    }
+    .leads-chart-bar .cnt { font-size: .65rem; font-weight: 700; color: var(--lapis); }
+    .leads-chart-bar .day { font-size: .6rem; color: #64748b; white-space: nowrap; }
+    .leads-table-wrap { overflow: auto; border: 1px solid rgba(15,118,110,.12); border-radius: .55rem; }
+    .leads-table { width: 100%; border-collapse: collapse; font-size: .82rem; }
+    .leads-table th, .leads-table td {
+      padding: .4rem .5rem; text-align: right; border-bottom: 1px solid rgba(0,0,0,.06);
+      white-space: nowrap;
+    }
+    .leads-table th {
+      background: #f0faf8; color: #0b3d5c; font-weight: 600; font-size: .74rem;
+      position: sticky; top: 0;
+    }
+    .leads-table tr:last-child td { border-bottom: 0; }
+    .leads-table tbody tr { cursor: pointer; transition: background .12s; }
+    .leads-table tbody tr:hover { background: #f8fffd; }
+    .lead-status {
+      display: inline-block; padding: .1rem .35rem; border-radius: .3rem;
+      font-size: .7rem; font-weight: 600;
+    }
+    .lead-status.new { background: #ecfeff; color: #0e7490; }
+    .lead-status.contacted { background: #fff7ed; color: #c2410c; }
+    .lead-status.qualified { background: #ecfdf5; color: #047857; }
+    .lead-status.rejected { background: #fef2f2; color: #b91c1c; }
+    .leads-filters {
+      display: flex; flex-wrap: wrap; gap: .3rem; margin-bottom: .55rem; align-items: center;
+    }
+    .leads-filters .filter-label { font-size: .74rem; color: #64748b; margin-left: .2rem; }
+    .leads-filter-btn {
+      border: 1px solid rgba(15,118,110,.2); background: #fff; color: #0b3d5c;
+      border-radius: .4rem; padding: .25rem .5rem; font: inherit; font-size: .76rem;
+      cursor: pointer; display: inline-flex; align-items: center; gap: .25rem;
+    }
+    .leads-filter-btn .n {
+      background: #eef7f5; color: var(--turquoise-deep); border-radius: .3rem;
+      padding: 0 .28rem; font-size: .7rem; font-weight: 700;
+    }
+    .leads-filter-btn.active {
+      background: var(--turquoise-deep); color: #fff; border-color: var(--turquoise-deep);
+    }
+    .leads-filter-btn.active .n { background: rgba(255,255,255,.2); color: #fff; }
+    .leads-group { margin-bottom: .65rem; }
+    .leads-group:last-child { margin-bottom: 0; }
+    .leads-group-head {
+      display: flex; align-items: center; justify-content: space-between; gap: .4rem;
+      margin-bottom: .3rem; padding: .15rem 0;
+    }
+    .leads-group-head h3 {
+      margin: 0; font-size: .84rem; display: flex; align-items: center; gap: .35rem;
+    }
+    .leads-group-head .n { font-size: .72rem; color: #64748b; font-weight: 600; }
+    .lead-modal {
+      position: fixed; inset: 0; z-index: 100; display: grid; place-items: center;
+      padding: .75rem;
+    }
+    .lead-modal[hidden] { display: none !important; }
+    .lead-modal-backdrop {
+      position: absolute; inset: 0; background: rgba(6, 42, 50, .55); backdrop-filter: blur(2px);
+    }
+    .lead-modal-card {
+      position: relative; z-index: 1; width: min(480px, 100%); max-height: min(90vh, 680px);
+      overflow: auto; background: #fff; border-radius: .75rem; padding: .9rem 1rem;
+      border: 1px solid rgba(15,118,110,.15); box-shadow: 0 16px 40px rgba(6,42,50,.22);
+    }
+    .lead-modal-card h3 { margin: 0 0 .55rem; color: var(--turquoise-deep); font-size: 1rem; }
+    .lead-modal-x {
+      position: absolute; top: .45rem; left: .45rem; border: 0; background: #f1f5f9;
+      width: 1.7rem; height: 1.7rem; border-radius: .4rem; cursor: pointer; font-size: 1rem; color: #475569;
+    }
+    .lead-detail-grid { display: grid; gap: .35rem; margin-bottom: .65rem; }
+    .lead-detail-row {
+      display: grid; grid-template-columns: 6.5rem 1fr; gap: .3rem; align-items: start;
+      font-size: .84rem;
+    }
+    .lead-detail-row .k { color: #64748b; }
+    .lead-detail-row .v { color: #0f172a; word-break: break-word; white-space: pre-wrap; }
+    .text-with-font { display: grid; gap: .25rem; margin: 0; }
+    .text-with-font .twf-head {
+      display: flex; align-items: center; justify-content: space-between; gap: .35rem; flex-wrap: wrap;
+    }
+    .text-with-font .twf-head > label { margin: 0; }
+    .type-controls {
+      display: flex; align-items: center; gap: .35rem; flex-wrap: wrap; min-width: 0;
+    }
+    .text-with-font .font-row,
+    .type-controls .font-row,
+    .type-controls .color-row {
+      display: flex; align-items: center; gap: .25rem; min-width: 0;
+    }
+    .text-with-font .font-row { flex: 1; max-width: 12rem; }
+    .text-with-font .font-row label,
+    .type-controls .font-row label,
+    .type-controls .color-row label {
+      margin: 0; font-size: .68rem; white-space: nowrap; color: #94a3b8;
+    }
+    .text-with-font .font-row select,
+    .type-controls .font-row select { font-size: .72rem; padding: .2rem .3rem; }
+    .type-controls .color-row input[type="color"] {
+      width: 1.85rem; height: 1.65rem; padding: 0; border: 0; background: transparent; cursor: pointer;
+    }
+    #styleFields .type-controls { margin-top: .25rem; }
+    #styleFields .type-controls .font-row { flex: 1; max-width: 14rem; }
+    .font-preview { font-size: .72rem; color: #64748b; margin: 0; }
+    .ed-toolbar .field { min-width: 7.5rem; }
+    .card + .card { margin-top: .55rem; }
+    #contentFields {
+      display: grid; gap: .55rem;
+    }
+    .ed-toolbar {
+      display: flex; flex-wrap: wrap; gap: .45rem; align-items: end;
+      padding: .45rem .55rem; border-radius: .5rem;
+      background: #f4fbf9; border: 1px solid rgba(15,118,110,.1);
+    }
+    .ed-toolbar .field { margin: 0; min-width: 8rem; }
+    .stats-cards {
+      display: grid; gap: .55rem;
+      grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr));
+    }
+    .stats-card {
+      background: #f4fbf9; border: 1px solid rgba(15,118,110,.12);
+      border-radius: .55rem; padding: .65rem .7rem;
+    }
+    .stats-card .label { font-size: .72rem; color: #64748b; margin: 0 0 .2rem; }
+    .stats-card .value { font-size: 1.35rem; font-weight: 700; color: #0f766e; margin: 0; }
+    .stats-bar-row { display: grid; grid-template-columns: 7.5rem 1fr auto; gap: .4rem; align-items: center; margin: .35rem 0; font-size: .82rem; }
+    .stats-bar-track { height: .45rem; background: #e2e8f0; border-radius: 99px; overflow: hidden; }
+    .stats-bar-fill { height: 100%; background: linear-gradient(90deg, #0f766e, #2ec4b6); border-radius: 99px; }
+    .perm-grid {
+      display: grid; gap: .35rem .75rem;
+      grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+      padding: .45rem .55rem; border: 1px solid rgba(15,118,110,.12); border-radius: .5rem; background: #f8fffd;
+    }
+    .perm-grid label {
+      display: flex; align-items: center; gap: .4rem; margin: 0; font-size: .82rem; font-weight: 500; cursor: pointer;
+    }
+    .perm-grid input { width: auto; margin: 0; }
+    .ed-grid {
+      display: grid; gap: .55rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: start;
+    }
+    .ed-grid.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .ed-grid.cols-1 { grid-template-columns: 1fr; }
+    @media (max-width: 900px) {
+      .ed-grid, .ed-grid.cols-3 { grid-template-columns: 1fr; }
+    }
+    .ed-box {
+      background: #f8fffd; border: 1px solid rgba(15,118,110,.12);
+      border-radius: .55rem; padding: .55rem .6rem;
+      display: grid; gap: .45rem; min-width: 0;
+    }
+    .ed-box > .field { margin: 0; }
+    .ed-box-title {
+      margin: 0; font-size: .74rem; font-weight: 700; color: #0b3d5c;
+      letter-spacing: .01em;
+    }
+    .ed-box .hint { margin: 0; }
+    .ed-stack { display: grid; gap: .4rem; }
+    .ed-inline {
+      display: grid; grid-template-columns: 1fr 1fr; gap: .4rem; align-items: start;
+    }
+    @media (max-width: 640px) { .ed-inline { grid-template-columns: 1fr; } }
+    .ed-color .row { gap: .25rem; }
+    .ed-color input[type="color"] {
+      width: 2rem; height: 1.85rem; padding: 0; border: 0; background: transparent; cursor: pointer;
+    }
+    .ed-item-list { display: grid; gap: .45rem; }
+    .ed-item {
+      background: #fff; border: 1px solid rgba(15,118,110,.12);
+      border-radius: .5rem; padding: .5rem .55rem;
+      display: grid; gap: .4rem;
+    }
+    .ed-item-head {
+      display: flex; align-items: center; justify-content: space-between; gap: .35rem;
+    }
+    .ed-item-head strong { font-size: .78rem; color: #0f766e; }
+  </style>
+</head>
+<body>
+  <div id="loginView">
+    <form class="card" id="loginForm">
+      <h1 style="color:#0f766e;margin-top:0">سایت‌ساز سورناگلد</h1>
+      <div class="field"><label>نام کاربری</label><input name="username" autocomplete="username" required /></div>
+      <div class="field"><label>رمز عبور</label><input name="password" type="password" autocomplete="current-password" required /></div>
+      <button class="btn" type="submit">ورود</button>
+      <p class="err" id="loginError"></p>
+    </form>
+  </div>
+
+  <div id="appView" class="hidden">
+    <header class="app">
+      <strong>سورناگلد · سایت‌ساز سکشن‌به‌سکشن</strong>
+      <div class="row">
+        <span id="currentUserBadge" class="hint" style="margin:0;color:#0f766e"></span>
+        <a href="/" target="_blank">مشاهده سایت</a>
+        <button type="button" id="saveAll" class="btn gold">ذخیره همه</button>
+        <button type="button" id="logoutBtn">خروج</button>
+      </div>
+    </header>
+    <div class="tabs">
+      <button type="button" class="active" data-tab="builder" data-need="builder">سایت‌ساز</button>
+      <button type="button" data-tab="blog" data-need="blog">مقالات</button>
+      <button type="button" data-tab="site" data-need="site">تنظیمات سایت</button>
+      <button type="button" data-tab="media" data-need="media">کتابخانه پوستر</button>
+      <button type="button" data-tab="leads" data-need="leads">ثبت‌نام‌ها</button>
+      <button type="button" data-tab="stats" data-need="stats">آمار</button>
+      <button type="button" data-tab="users" data-need="users.manage">کاربران</button>
+    </div>
+
+    <div id="tab-builder" class="layout">
+      <aside class="sidebar">
+        <div class="row" style="margin-bottom:.45rem">
+          <select id="addType" style="flex:1">
+            <option value="text">متن / توضیح</option>
+            <option value="text_box">باکس متن</option>
+            <option value="text_image">متن و عکس (دو ستونی)</option>
+            <option value="posters">پوسترها</option>
+            <option value="features">ویژگی‌ها</option>
+            <option value="blog">مقالات / بلاگ</option>
+            <option value="cta">فراخوان اقدام</option>
+            <option value="links">لینک‌ها</option>
+            <option value="hero">هیرو</option>
+            <option value="register">فرم ثبت‌نام</option>
+            <option value="spacer">فاصله خالی</option>
+          </select>
+          <button class="btn sm" type="button" id="addSection">افزودن</button>
+        </div>
+        <p class="hint">با ⋮⋮ بکشید و ترتیب را عوض کنید.</p>
+        <div id="sectionList"></div>
+      </aside>
+      <main class="main">
+        <p id="saveMsg" class="ok"></p>
+        <div id="emptyEditor" class="card">یک سکشن را انتخاب کنید یا سکشن جدید بسازید.</div>
+        <div id="editor" class="hidden">
+          <div class="card panel">
+            <h2>محتوای سکشن</h2>
+            <div id="contentFields"></div>
+          </div>
+          <div class="card panel">
+            <h2>اندازه، فاصله، تراز و باکس</h2>
+            <div class="style-grid" id="styleFields"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div id="tab-blog" class="tab-pane hidden">
+      <div class="card">
+        <div class="row" style="justify-content:space-between;margin-bottom:.45rem">
+          <h2 style="margin:0">مقالات و بلاگ</h2>
+          <button class="btn gold sm" type="button" id="addPost">+ مقاله جدید</button>
+        </div>
+        <p class="hint" style="margin:0">مقالات در <a href="/blog" target="_blank">/blog</a> و سکشن بلاگ لندینگ دیده می‌شوند.</p>
+      </div>
+      <div id="postsList"></div>
+    </div>
+
+    <div id="tab-site" class="tab-pane narrow hidden">
+      <div class="card">
+        <h2>تنظیمات سایت</h2>
+        <div class="field"><label>فونت پیش‌فرض سایت (فوتر و متن‌های عمومی)</label>
+          <select id="siteDefaultFont"></select>
+        </div>
+
+        <h3>سئو لندینگ</h3>
+        <p class="hint">عنوان، توضیح و کلمات کلیدی برای گوگل و شبکه‌های اجتماعی.</p>
+        <div class="field"><label>عنوان صفحه (Title)</label><input id="seoTitle" /></div>
+        <div class="field"><label>توضیح متا (Description)</label><textarea id="seoDescription" rows="3"></textarea></div>
+        <div class="field"><label>کلمات کلیدی</label><input id="seoKeywords" placeholder="با ویرگول جدا کنید" /></div>
+        <div class="grid-2">
+          <div class="field"><label>آدرس Canonical</label><input id="seoCanonical" dir="ltr" placeholder="https://sorenagold.com/" /></div>
+          <div class="field"><label>تصویر Open Graph (URL)</label><input id="seoOgImage" dir="ltr" placeholder="/posters/..." /></div>
+        </div>
+
+        <h3>منوی هدر</h3>
+        <p class="hint">متن، لینک، فونت، اندازه، رنگ و نوع ظاهر هر آیتم.</p>
+        <div id="navItems"></div>
+        <button class="btn ghost sm" type="button" id="addNavItem" style="margin-top:.25rem">+ آیتم منو</button>
+
+        <h3>نوار متحرک پایین صفحه</h3>
+        <p class="hint">هر تکه متن و رنگ جداگانه.</p>
+        <div class="field" style="max-width:22rem">
+          <label>سرعت حرکت نوار</label>
+          <div class="row" style="align-items:center;gap:.55rem">
+            <input type="range" id="tickerSpeed" min="1" max="10" step="1" style="flex:1" />
+            <strong id="tickerSpeedVal" style="min-width:1.5rem;text-align:center">۵</strong>
+          </div>
+          <p class="hint" style="margin:.25rem 0 0">۱ آهسته · ۱۰ سریع</p>
+        </div>
+        <div id="tickerItems"></div>
+        <button class="btn ghost sm" type="button" id="addTickerItem" style="margin-top:.25rem">+ تکه متن</button>
+
+        <h3>فوتر سایت</h3>
+        <p class="hint">آدرس و موبایل؛ توضیحات با پاپ‌آپ باز می‌شوند.</p>
+        <div class="grid-2">
+          <div class="field"><label>نام برند</label><input id="footerBrand" /></div>
+          <div class="field"><label>شعار / توضیح کوتاه</label><input id="footerTagline" /></div>
+        </div>
+        <div class="grid-2">
+          <div class="field"><label>آدرس</label><input id="footerAddress" /></div>
+          <div class="field"><label>شماره موبایل</label><input id="footerPhone" placeholder="0912..." /></div>
+        </div>
+        <h3>توضیحات پاپ‌آپ فوتر</h3>
+        <div id="footerInfos"></div>
+        <button class="btn ghost sm" type="button" id="addFooterInfo" style="margin-top:.25rem">+ توضیح پاپ‌آپ</button>
+        <p class="ok" id="siteMsg"></p>
+      </div>
+    </div>
+
+    <div id="tab-media" class="tab-pane hidden">
+      <div class="card">
+        <h2>کتابخانه پوستر / تصویر</h2>
+        <form id="mediaForm" class="row" style="margin-bottom:.55rem">
+          <input type="file" name="file" accept="image/*" required />
+          <button class="btn gold" type="submit">آپلود</button>
+        </form>
+        <div class="media-grid" id="mediaLibrary"></div>
+      </div>
+    </div>
+
+    <div id="tab-leads" class="tab-pane wide hidden">
+      <div class="card">
+        <h2>داشبورد ثبت‌نام‌ها</h2>
+        <div class="leads-dash" id="leadsDash"></div>
+        <div class="leads-chart-wrap">
+          <h3 style="margin-top:0">روند روزانه · تقویم شمسی (۱۴ روز اخیر)</h3>
+          <div class="leads-chart" id="leadsChart" aria-label="نمودار روند ثبت‌نام"></div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>همه درخواست‌ها</h2>
+        <div class="leads-filters" id="leadsFilters" aria-label="فیلتر وضعیت"></div>
+        <div id="leadsList"></div>
+      </div>
+      <div class="lead-modal" id="leadDetailModal" hidden>
+        <div class="lead-modal-backdrop" data-lead-close></div>
+        <div class="lead-modal-card" role="dialog" aria-modal="true" aria-labelledby="leadDetailTitle">
+          <button type="button" class="lead-modal-x" data-lead-close aria-label="بستن">×</button>
+          <h3 id="leadDetailTitle">جزئیات ثبت‌نام</h3>
+          <div id="leadDetailBody"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-stats" class="tab-pane wide hidden">
+      <div class="card">
+        <div class="row" style="justify-content:space-between;align-items:center;margin-bottom:.35rem">
+          <h2 style="margin:0">آمار بازدید و کلیک</h2>
+          <button type="button" class="btn ghost sm" id="refreshStats">بروزرسانی</button>
+        </div>
+        <p class="hint" style="margin-top:0">بازدید لندینگ، بازدیدکننده‌های یکتا، کلیک ورود/ثبت‌نام و مشاهده سکشن‌ها.</p>
+        <div class="stats-cards" id="statsCards"></div>
+        <div class="leads-chart-wrap" style="margin-top:.85rem">
+          <h3 style="margin-top:0">روند ۱۴ روزه بازدید</h3>
+          <div class="leads-chart" id="statsViewsChart" aria-label="نمودار بازدید"></div>
+        </div>
+        <div style="margin-top:.85rem">
+          <h3 style="margin-top:0">کلیک‌های اساسی</h3>
+          <div id="statsClicks"></div>
+        </div>
+        <div style="margin-top:1rem">
+          <h3 style="margin-top:0">پربازدیدترین سکشن‌ها</h3>
+          <div id="statsSections"></div>
+        </div>
+        <p class="err" id="statsErr"></p>
+      </div>
+    </div>
+
+    <div id="tab-users" class="tab-pane wide hidden">
+      <div class="card">
+        <h2>کاربران و سطح دسترسی</h2>
+        <p class="hint" style="margin-top:0">از قالب نقش شروع کنید، بعد دسترسی‌های جزئی را تیک بزنید یا بردارید.</p>
+        <div class="grid-2">
+          <div class="field"><label>نام نمایشی</label><input id="newUserDisplay" placeholder="مثلاً سارا" /></div>
+          <div class="field"><label>نام کاربری</label><input id="newUserName" dir="ltr" placeholder="sara" /></div>
+        </div>
+        <div class="grid-2">
+          <div class="field"><label>رمز عبور</label><input id="newUserPass" type="password" dir="ltr" /></div>
+          <div class="field"><label>قالب نقش</label>
+            <select id="newUserRole">
+              <option value="editor">ویرایشگر محتوا</option>
+              <option value="leads">مسئول ثبت‌نام</option>
+              <option value="admin">مدیر کل (همه)</option>
+              <option value="custom">سفارشی</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label>دسترسی‌های جزئی</label>
+          <div class="perm-grid" id="newUserPerms"></div>
+        </div>
+        <button class="btn gold sm" type="button" id="createUserBtn">+ ایجاد کاربر</button>
+        <p class="ok" id="usersMsg"></p>
+        <p class="err" id="usersErr"></p>
+      </div>
+      <div id="usersList"></div>
+    </div>
+  </div>
+
+  <script type="module">
+    import { SECTION_LABELS, defaultSection, FONT_OPTIONS, fontOptionsGroupedHtml, INTEREST_LABELS, toFaDigits } from "/site-render.js";
+
+    let content = { media: [], sections: [], posts: [], site: { loginUrl: "", loginLabel: "ورود" } };
+    let selectedId = null;
+    let currentUser = null;
+    let currentPerms = [];
+    let roleDefs = {};
+    let permDefs = {};
+
+    const $ = (id) => document.getElementById(id);
+    const can = (perm) => currentPerms.includes(perm);
+
+    function permEntries() {
+      const keys = Object.keys(permDefs || {});
+      if (keys.length) return keys.map((k) => [k, permDefs[k]?.label || k]);
+      return [
+        ["builder", "سایت‌ساز (سکشن‌ها)"],
+        ["blog", "مقالات / بلاگ"],
+        ["site", "تنظیمات سایت و سئو"],
+        ["media", "کتابخانه پوستر"],
+        ["content.write", "ذخیره و آپلود محتوا"],
+        ["leads", "مشاهده ثبت‌نام‌ها"],
+        ["leads.write", "ویرایش ثبت‌نام‌ها"],
+        ["stats", "آمار بازدید و کلیک"],
+        ["users.manage", "مدیریت کاربران و دسترسی‌ها"],
+      ];
+    }
+
+    function permsHtml(selected = [], namePrefix = "perm") {
+      const set = new Set(selected || []);
+      return permEntries()
+        .map(
+          ([key, label]) =>
+            `<label><input type="checkbox" data-perm="${key}" name="${namePrefix}" value="${key}" ${set.has(key) ? "checked" : ""} /> ${label}</label>`
+        )
+        .join("");
+    }
+
+    function readPermsFrom(root) {
+      return [...(root?.querySelectorAll("[data-perm]:checked") || [])].map((el) => el.dataset.perm);
+    }
+
+    function applyRolePreset(selectEl, boxEl) {
+      const role = selectEl?.value || "custom";
+      if (role === "custom" || !roleDefs[role]) return;
+      const perms = roleDefs[role].perms || [];
+      boxEl?.querySelectorAll("[data-perm]").forEach((el) => {
+        el.checked = perms.includes(el.dataset.perm);
+      });
+    }
+
+    function markCustomIfNeeded(selectEl, boxEl) {
+      if (!selectEl || selectEl.value === "custom") return;
+      const role = selectEl.value;
+      const preset = [...(roleDefs[role]?.perms || [])].sort().join(",");
+      const current = readPermsFrom(boxEl).sort().join(",");
+      if (preset !== current) selectEl.value = "custom";
+    }
+
+    function slugify(text) {
+      return String(text || "")
+        .trim()
+        .toLowerCase()
+        .replace(/\s+/g, "-")
+        .replace(/[^a-z0-9\u0600-\u06FF-]/g, "")
+        .replace(/-+/g, "-")
+        .replace(/^-|-$/g, "") || `post-${Date.now().toString(36)}`;
+    }
+
+    function applyAccessUi() {
+      const badge = $("currentUserBadge");
+      if (badge && currentUser) {
+        badge.textContent = `${currentUser.displayName || currentUser.username} · ${currentUser.roleLabel || currentUser.role}`;
+      }
+      if ($("saveAll")) $("saveAll").classList.toggle("hidden", !can("content.write"));
+
+      const tabs = [...document.querySelectorAll(".tabs button[data-tab]")];
+      tabs.forEach((btn) => {
+        const need = btn.dataset.need;
+        const allowed = !need || can(need);
+        btn.classList.toggle("hidden", !allowed);
+      });
+
+      const first = tabs.find((b) => !b.classList.contains("hidden"));
+      const active = tabs.find((b) => b.classList.contains("active") && !b.classList.contains("hidden")) || first;
+      tabs.forEach((b) => b.classList.toggle("active", b === active));
+      ["builder", "blog", "site", "media", "leads", "stats", "users"].forEach((id) => {
+        const pane = $(`tab-${id}`);
+        if (pane) pane.classList.toggle("hidden", !active || active.dataset.tab !== id);
+      });
+    }
+
+    function renderNewUserPerms() {
+      const box = $("newUserPerms");
+      if (!box) return;
+      const role = $("newUserRole")?.value || "editor";
+      const selected = roleDefs[role]?.perms || roleDefs.editor?.perms || [];
+      box.innerHTML = permsHtml(selected, "new-perm");
+      box.querySelectorAll("[data-perm]").forEach((el) => {
+        el.addEventListener("change", () => markCustomIfNeeded($("newUserRole"), box));
+      });
+    }
+
+    async function enterApp(sessionData) {
+      currentUser = sessionData.user || null;
+      currentPerms = Array.isArray(sessionData.perms) ? sessionData.perms : [];
+      roleDefs = sessionData.roles || {};
+      permDefs = sessionData.permDefs || {};
+      $("loginView").classList.add("hidden");
+      $("appView").classList.remove("hidden");
+      applyAccessUi();
+      renderNewUserPerms();
+      if (can("content.write") || can("builder") || can("blog") || can("site") || can("media")) {
+        await loadContent();
+      }
+      if (can("leads")) await loadLeads();
+      if (can("stats")) await loadStats();
+      if (can("users.manage")) await loadUsers();
+    }
+
+    async function checkSession() {
+      const res = await fetch("/api/admin/session");
+      if (res.ok) {
+        await enterApp(await res.json());
+      }
+    }
+
+    $("loginForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const fd = new FormData(e.currentTarget);
+      const res = await fetch("/api/admin/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username: fd.get("username"), password: fd.get("password") }),
+      });
+      if (!res.ok) {
+        $("loginError").textContent = (await res.json()).error || "خطا";
+        return;
+      }
+      await enterApp(await res.json());
+    });
+
+    $("logoutBtn").addEventListener("click", async () => {
+      await fetch("/api/admin/logout", { method: "POST" });
+      location.reload();
+    });
+
+    document.querySelectorAll(".tabs button").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        if (btn.classList.contains("hidden")) return;
+        document.querySelectorAll(".tabs button").forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        ["builder", "blog", "site", "media", "leads", "stats", "users"].forEach((id) => {
+          $(`tab-${id}`)?.classList.toggle("hidden", id !== btn.dataset.tab);
+        });
+        if (btn.dataset.tab === "users" && can("users.manage")) loadUsers();
+        if (btn.dataset.tab === "stats" && can("stats")) loadStats();
+      });
+    });
+
+    function statsBar(label, value, max) {
+      const pct = max > 0 ? Math.max(4, Math.round((value / max) * 100)) : 0;
+      return `<div class="stats-bar-row"><span>${label}</span><div class="stats-bar-track"><div class="stats-bar-fill" style="width:${pct}%"></div></div><strong>${toFaDigits(value)}</strong></div>`;
+    }
+
+    async function loadStats() {
+      if (!can("stats")) return;
+      const err = $("statsErr");
+      if (err) err.textContent = "";
+      const res = await fetch("/api/admin/analytics?days=14");
+      if (!res.ok) {
+        if (err) err.textContent = (await res.json().catch(() => ({}))).error || "خطا در دریافت آمار";
+        return;
+      }
+      const data = await res.json();
+      const today = data.today || { views: 0, unique: 0, clicks: {} };
+      const totals = data.totals || { views: 0, unique: 0, clicks: {} };
+      const cards = $("statsCards");
+      if (cards) {
+        cards.innerHTML = [
+          ["بازدید امروز", today.views],
+          ["بازدیدکننده یکتا امروز", today.unique],
+          ["بازدید ۱۴ روز", totals.views],
+          ["کلیک ثبت‌نام ۱۴ روز", totals.clicks?.register || 0],
+          ["کلیک ورود ۱۴ روز", totals.clicks?.login || 0],
+          ["کلیک منو ۱۴ روز", totals.clicks?.nav || 0],
+        ]
+          .map(([label, value]) => `<div class="stats-card"><p class="label">${label}</p><p class="value">${toFaDigits(value)}</p></div>`)
+          .join("");
+      }
+      const chart = $("statsViewsChart");
+      if (chart) {
+        const series = data.series || [];
+        const max = Math.max(1, ...series.map((d) => d.views || 0));
+        chart.innerHTML = series
+          .map((d) => {
+            const h = Math.max(4, Math.round(((d.views || 0) / max) * 100));
+            const dayLabel = toFaDigits(String(d.date || "").slice(5).replace("-", "/"));
+            return `<div class="leads-chart-bar" title="${d.date}: ${d.views}">
+              <span class="cnt">${d.views ? toFaDigits(d.views) : ""}</span>
+              <div class="bar" style="height:${h}%"></div>
+              <span class="day">${dayLabel}</span>
+            </div>`;
+          })
+          .join("");
+      }
+      const clicksBox = $("statsClicks");
+      if (clicksBox) {
+        const c = totals.clicks || {};
+        const items = [
+          ["ورود", c.login || 0],
+          ["ثبت‌نام / اعلام آمادگی", c.register || 0],
+          ["منوی هدر", c.nav || 0],
+          ["فراخوان (CTA)", c.cta || 0],
+          ["مقالات", c.blog || 0],
+        ];
+        const max = Math.max(1, ...items.map(([, v]) => v));
+        clicksBox.innerHTML = items.map(([l, v]) => statsBar(l, v, max)).join("");
+      }
+      const secBox = $("statsSections");
+      if (secBox) {
+        const top = data.topSections || [];
+        if (!top.length) {
+          secBox.innerHTML = `<p class="hint">هنوز مشاهده سکشنی ثبت نشده.</p>`;
+        } else {
+          const max = Math.max(1, ...top.map((s) => s.count || 0));
+          secBox.innerHTML = top
+            .map((s) => statsBar(`${s.label || s.type} · ${s.title || s.id}`, s.count || 0, max))
+            .join("");
+        }
+      }
+    }
+
+    $("refreshStats")?.addEventListener("click", () => loadStats());
+
+    async function loadUsers() {
+      if (!can("users.manage")) return;
+      const res = await fetch("/api/admin/users");
+      if (!res.ok) {
+        $("usersErr").textContent = (await res.json()).error || "خطا در دریافت کاربران";
+        return;
+      }
+      const data = await res.json();
+      roleDefs = data.roles || roleDefs;
+      permDefs = data.permDefs || permDefs;
+      renderNewUserPerms();
+      const box = $("usersList");
+      if (!box) return;
+      if (!data.users?.length) {
+        box.innerHTML = `<p class="hint">هنوز کاربری نیست.</p>`;
+        return;
+      }
+      box.innerHTML = data.users
+        .map((u) => {
+          const isSelf = currentUser && u.id === currentUser.id;
+          const roleOpts = Object.entries(roleDefs)
+            .map(([k, v]) => `<option value="${k}" ${u.role === k ? "selected" : ""}>${v.label || k}</option>`)
+            .join("");
+          return `
+          <div class="card" data-user-id="${u.id}" style="margin-top:.45rem">
+            <div class="row" style="justify-content:space-between;align-items:center;margin-bottom:.35rem">
+              <strong>${esc(u.displayName || u.username)}${isSelf ? " (شما)" : ""}</strong>
+              <span class="hint" style="margin:0" dir="ltr">${esc(u.username)}</span>
+            </div>
+            <div class="grid-2">
+              <div class="field" style="margin:0"><label>نام نمایشی</label>
+                <input data-u-display value="${esc(u.displayName || "")}" /></div>
+              <div class="field" style="margin:0"><label>قالب نقش</label>
+                <select data-u-role>${roleOpts}</select></div>
+            </div>
+            <div class="field" style="margin-top:.45rem"><label>دسترسی‌های جزئی</label>
+              <div class="perm-grid" data-u-perms>${permsHtml(u.perms || [], `u-${u.id}`)}</div></div>
+            <div class="field" style="margin-top:.45rem"><label>رمز جدید (اختیاری)</label>
+              <input data-u-pass type="password" dir="ltr" placeholder="خالی = بدون تغییر" /></div>
+            <div class="row" style="margin-top:.45rem;gap:.35rem">
+              <button type="button" class="btn sm" data-u-save>ذخیره</button>
+              <button type="button" class="btn danger sm" data-u-del ${isSelf ? "disabled" : ""}>حذف</button>
+            </div>
+          </div>`;
+        })
+        .join("");
+
+      box.querySelectorAll("[data-user-id]").forEach((card) => {
+        const id = card.dataset.userId;
+        const roleSel = card.querySelector("[data-u-role]");
+        const permBox = card.querySelector("[data-u-perms]");
+        roleSel?.addEventListener("change", () => applyRolePreset(roleSel, permBox));
+        permBox?.querySelectorAll("[data-perm]").forEach((el) => {
+          el.addEventListener("change", () => markCustomIfNeeded(roleSel, permBox));
+        });
+        card.querySelector("[data-u-save]")?.addEventListener("click", async () => {
+          $("usersErr").textContent = "";
+          $("usersMsg").textContent = "";
+          const body = {
+            displayName: card.querySelector("[data-u-display]")?.value || "",
+            role: roleSel?.value || "custom",
+            perms: readPermsFrom(permBox),
+          };
+          const pass = card.querySelector("[data-u-pass]")?.value || "";
+          if (pass) body.password = pass;
+          const res = await fetch(`/api/admin/users/${id}`, {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(body),
+          });
+          const json = await res.json().catch(() => ({}));
+          if (!res.ok) {
+            $("usersErr").textContent = json.error || "خطا";
+            return;
+          }
+          $("usersMsg").textContent = "کاربر به‌روز شد";
+          if (currentUser?.id === id) {
+            currentUser = json.user;
+            currentPerms = Array.isArray(json.user?.perms) ? json.user.perms : currentPerms;
+            applyAccessUi();
+          }
+          await loadUsers();
+        });
+        card.querySelector("[data-u-del]")?.addEventListener("click", async () => {
+          if (!confirm("این کاربر حذف شود؟")) return;
+          $("usersErr").textContent = "";
+          const res = await fetch(`/api/admin/users/${id}`, { method: "DELETE" });
+          const json = await res.json().catch(() => ({}));
+          if (!res.ok) {
+            $("usersErr").textContent = json.error || "خطا";
+            return;
+          }
+          $("usersMsg").textContent = "کاربر حذف شد";
+          await loadUsers();
+        });
+      });
+    }
+
+    $("newUserRole")?.addEventListener("change", () => {
+      applyRolePreset($("newUserRole"), $("newUserPerms"));
+    });
+
+    $("createUserBtn")?.addEventListener("click", async () => {
+      $("usersErr").textContent = "";
+      $("usersMsg").textContent = "";
+      const res = await fetch("/api/admin/users", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          displayName: $("newUserDisplay")?.value || "",
+          username: $("newUserName")?.value || "",
+          password: $("newUserPass")?.value || "",
+          role: $("newUserRole")?.value || "custom",
+          perms: readPermsFrom($("newUserPerms")),
+        }),
+      });
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        $("usersErr").textContent = json.error || "خطا";
+        return;
+      }
+      $("usersMsg").textContent = "کاربر ساخته شد";
+      if ($("newUserDisplay")) $("newUserDisplay").value = "";
+      if ($("newUserName")) $("newUserName").value = "";
+      if ($("newUserPass")) $("newUserPass").value = "";
+      if ($("newUserRole")) $("newUserRole").value = "editor";
+      renderNewUserPerms();
+      await loadUsers();
+    });
+
+    async function loadContent() {
+      const res = await fetch("/api/content");
+      content = await res.json();
+      if (!Array.isArray(content.sections)) content.sections = [];
+      if (!Array.isArray(content.media)) content.media = [];
+      if (!Array.isArray(content.posts)) content.posts = [];
+      if (!content.site || typeof content.site !== "object") {
+        content.site = { loginUrl: "", loginLabel: "ورود" };
+      }
+      if (!selectedId && content.sections[0]) selectedId = content.sections[0].id;
+      renderList();
+      renderEditor();
+      renderMediaLibrary();
+      renderPosts();
+      renderSiteSettings();
+    }
+
+    function siteDirtyMsg() {
+      $("siteMsg").textContent = "تغییر کرد — برای اعمال، «ذخیره همه» را بزنید";
+    }
+
+    const TICKER_PRESETS = [
+      { label: "کرم", value: "#f7f0e3" },
+      { label: "طلایی", value: "#e2b657" },
+      { label: "فیروزه‌ای", value: "#2ec4b6" },
+      { label: "سفید", value: "#ffffff" },
+      { label: "طلای تیره", value: "#c4922a" },
+      { label: "فیروزه تیره", value: "#0f766e" },
+    ];
+
+    function normalizeTickerItem(item) {
+      if (typeof item === "string") return { text: item, color: "#f7f0e3" };
+      return {
+        text: String(item?.text || ""),
+        color: String(item?.color || "#f7f0e3"),
+      };
+    }
+
+    function defaultNavItems() {
+      return [
+        { label: "مقالات", href: "/blog", font: "Graphik Arabic", size: 14, color: "#f7f0e3", variant: "link" },
+        { label: "پوسترها", href: "#posters-1", font: "Graphik Arabic", size: 14, color: "#f7f0e3", variant: "link" },
+        {
+          label: content.site?.loginLabel || "ورود",
+          href: content.site?.loginUrl || "",
+          font: "Graphik Arabic",
+          size: 13,
+          color: "#2ec4b6",
+          variant: "login",
+        },
+        { label: "اعلام آمادگی", href: "#register-1", font: "Graphik Arabic", size: 13, color: "#062a32", variant: "cta" },
+      ];
+    }
+
+    function normalizeNavItem(item) {
+      return {
+        label: String(item?.label || ""),
+        href: String(item?.href || ""),
+        font: String(item?.font || "Graphik Arabic"),
+        size: Number(item?.size) || 14,
+        color: String(item?.color || "#f7f0e3"),
+        variant: ["link", "login", "cta"].includes(item?.variant) ? item.variant : "link",
+      };
+    }
+
+    function defaultFooter() {
+      return {
+        brand: "سورناگلد",
+        tagline: "معاملات طلای آبشده · با اعتبار سایناگلد",
+        address: "",
+        phone: "",
+        infos: [],
+      };
+    }
+
+    function normalizeFooterInfo(item, i = 0) {
+      return {
+        id: String(item?.id || `info-${Date.now()}-${i}`),
+        label: String(item?.label || ""),
+        title: String(item?.title || ""),
+        body: String(item?.body || ""),
+      };
+    }
+
+    function normalizeFooter(raw) {
+      const base = defaultFooter();
+      const src = raw && typeof raw === "object" ? raw : {};
+      return {
+        brand: String(src.brand ?? base.brand),
+        tagline: String(src.tagline ?? base.tagline),
+        address: String(src.address ?? ""),
+        phone: String(src.phone ?? ""),
+        infos: Array.isArray(src.infos) ? src.infos.map(normalizeFooterInfo) : [],
+      };
+    }
+
+    function ensureSite() {
+      if (!content.site || typeof content.site !== "object") {
+        content.site = { loginUrl: "", loginLabel: "ورود", defaultFont: "Graphik Arabic", tickerItems: [], navItems: [], footer: defaultFooter() };
+      }
+      if (!Array.isArray(content.site.tickerItems)) content.site.tickerItems = [];
+      content.site.tickerItems = content.site.tickerItems.map(normalizeTickerItem);
+      if (!Array.isArray(content.site.navItems)) {
+        content.site.navItems = defaultNavItems();
+      } else if (!content.site.navItems.length) {
+        // خالی عمدی را دست نزن؛ فقط در لود اول اگر کلید نبود پر می‌شود
+        content.site.navItems = [];
+      } else {
+        content.site.navItems = content.site.navItems.map(normalizeNavItem);
+      }
+      if (!content.site.defaultFont) content.site.defaultFont = "Graphik Arabic";
+      const speed = Number(content.site.tickerSpeed);
+      content.site.tickerSpeed = Number.isFinite(speed) ? Math.max(1, Math.min(10, Math.round(speed))) : 5;
+      content.site.footer = normalizeFooter(content.site.footer);
+      if (!content.site.seo || typeof content.site.seo !== "object") content.site.seo = {};
+      const seo = content.site.seo;
+      if (!seo.title) seo.title = "سورناگلد | معاملات طلای آبشده";
+      if (!seo.description) {
+        seo.description =
+          "سورناگلد؛ خرید و فروش طلای آبشده با اعتبار سایناگلد. نرخ شفاف، تسویه سریع و معاملات مطمئن.";
+      }
+      if (seo.keywords == null) seo.keywords = "سورناگلد,طلای آبشده,خرید طلا,فروش طلا,سایناگلد";
+      if (seo.canonicalUrl == null) seo.canonicalUrl = "";
+      if (seo.ogImage == null) seo.ogImage = "";
+    }
+
+    function renderFooterEditor() {
+      ensureSite();
+      const f = content.site.footer;
+      $("footerBrand").value = f.brand || "";
+      $("footerTagline").value = f.tagline || "";
+      $("footerAddress").value = f.address || "";
+      $("footerPhone").value = f.phone || "";
+
+      const box = $("footerInfos");
+      if (!f.infos.length) {
+        box.innerHTML = `<p style="color:#64748b;font-size:.85rem">هنوز توضیح پاپ‌آپی نیست.</p>`;
+      } else {
+        box.innerHTML = f.infos
+          .map(
+            (item, i) => `
+          <div class="card" style="padding:.55rem .65rem;margin-bottom:.4rem;background:#f8fffd" data-footer-info="${i}">
+            <div class="grid-2">
+              <div class="field" style="margin:0"><label>متن لینک فوتر</label>
+                <input data-fi-label="${i}" value="${esc(item.label)}" /></div>
+              <div class="field" style="margin:0"><label>عنوان پاپ‌آپ</label>
+                <input data-fi-title="${i}" value="${esc(item.title)}" /></div>
+            </div>
+            <div class="field" style="margin:.55rem 0 0"><label>متن توضیح</label>
+              <textarea data-fi-body="${i}" rows="3">${esc(item.body)}</textarea></div>
+            <button type="button" class="btn danger sm" data-del-fi="${i}" style="margin-top:.45rem">حذف</button>
+          </div>`
+          )
+          .join("");
+      }
+
+      const bindField = (sel, key) => {
+        box.querySelectorAll(sel).forEach((el) => {
+          el.addEventListener("input", () => {
+            const i = Number(el.dataset[key]);
+            if (content.site.footer.infos[i]) {
+              const map = { fiLabel: "label", fiTitle: "title", fiBody: "body" };
+              content.site.footer.infos[i][map[key]] = el.value;
+              siteDirtyMsg();
+            }
+          });
+        });
+      };
+      bindField("[data-fi-label]", "fiLabel");
+      bindField("[data-fi-title]", "fiTitle");
+      bindField("[data-fi-body]", "fiBody");
+      box.querySelectorAll("[data-del-fi]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          content.site.footer.infos.splice(Number(btn.dataset.delFi), 1);
+          siteDirtyMsg();
+          renderFooterEditor();
+        });
+      });
+    }
+
+    function renderSiteSettings() {
+      ensureSite();
+      const fontSel = $("siteDefaultFont");
+      fontSel.innerHTML = fontOptionsGroupedHtml(content.site.defaultFont || "Graphik Arabic");
+      const speedEl = $("tickerSpeed");
+      const speedVal = $("tickerSpeedVal");
+      if (speedEl) {
+        speedEl.value = String(content.site.tickerSpeed || 5);
+        if (speedVal) speedVal.textContent = toFaDigits(speedEl.value);
+      }
+      const seo = content.site.seo || {};
+      if ($("seoTitle")) $("seoTitle").value = seo.title || "";
+      if ($("seoDescription")) $("seoDescription").value = seo.description || "";
+      if ($("seoKeywords")) $("seoKeywords").value = seo.keywords || "";
+      if ($("seoCanonical")) $("seoCanonical").value = seo.canonicalUrl || "";
+      if ($("seoOgImage")) $("seoOgImage").value = seo.ogImage || "";
+      renderNavEditor();
+      renderTickerEditor();
+      renderFooterEditor();
+    }
+
+    function renderNavEditor() {
+      ensureSite();
+      const box = $("navItems");
+      box.innerHTML = content.site.navItems
+        .map((item, i) => {
+          const color = item.color || "#f7f0e3";
+          return `
+        <div class="card" style="margin:.4rem 0;padding:.55rem .65rem;background:#f8fffd">
+          <div class="grid-2">
+            <div class="field"><label>متن</label><input data-nav-label="${i}" value="${esc(item.label)}" /></div>
+            <div class="field"><label>لینک</label><input data-nav-href="${i}" value="${esc(item.href)}" dir="ltr" placeholder="/blog یا https://..." /></div>
+          </div>
+          <div class="grid-2">
+            <div class="field"><label>فونت</label><select data-nav-font="${i}">${fontOptionsGroupedHtml(item.font)}</select></div>
+            <div class="field"><label>نوع ظاهر</label>
+              <select data-nav-variant="${i}">
+                <option value="link" ${item.variant === "link" ? "selected" : ""}>لینک ساده</option>
+                <option value="login" ${item.variant === "login" ? "selected" : ""}>ورود (خاص)</option>
+                <option value="cta" ${item.variant === "cta" ? "selected" : ""}>فراخوان / اعلام آمادگی (خاص)</option>
+              </select>
+            </div>
+          </div>
+          <div class="row" style="align-items:center;gap:.45rem">
+            <div class="field" style="margin:0;flex:0 0 5.5rem"><label>اندازه</label><input data-nav-size="${i}" type="number" min="10" max="28" value="${Number(item.size) || 14}" /></div>
+            <div class="field" style="margin:0"><label>رنگ</label>
+              <div class="row" style="gap:.35rem">
+                <input data-nav-color="${i}" type="color" value="${/^#[0-9a-fA-F]{6}$/.test(color) ? color : "#f7f0e3"}" style="width:2.4rem;height:2.2rem;padding:0;border:0;background:transparent;cursor:pointer" />
+                <input data-nav-hex="${i}" value="${esc(color)}" dir="ltr" style="width:5.8rem" />
+              </div>
+            </div>
+            <button class="btn danger sm" type="button" data-del-nav="${i}" style="margin-top:1.1rem">حذف</button>
+          </div>
+        </div>`;
+        })
+        .join("") || `<p style="color:#64748b;font-size:.85rem">آیتمی نیست.</p>`;
+
+      box.querySelectorAll("[data-nav-label]").forEach((el) => {
+        el.addEventListener("input", () => {
+          content.site.navItems[Number(el.dataset.navLabel)].label = el.value;
+          siteDirtyMsg();
+        });
+      });
+      box.querySelectorAll("[data-nav-href]").forEach((el) => {
+        el.addEventListener("input", () => {
+          const i = Number(el.dataset.navHref);
+          content.site.navItems[i].href = el.value;
+          if (content.site.navItems[i].variant === "login") content.site.loginUrl = el.value.trim();
+          siteDirtyMsg();
+        });
+      });
+      box.querySelectorAll("[data-nav-font]").forEach((el) => {
+        el.addEventListener("change", () => {
+          content.site.navItems[Number(el.dataset.navFont)].font = el.value;
+          siteDirtyMsg();
+        });
+      });
+      box.querySelectorAll("[data-nav-variant]").forEach((el) => {
+        el.addEventListener("change", () => {
+          content.site.navItems[Number(el.dataset.navVariant)].variant = el.value;
+          siteDirtyMsg();
+        });
+      });
+      box.querySelectorAll("[data-nav-size]").forEach((el) => {
+        el.addEventListener("input", () => {
+          content.site.navItems[Number(el.dataset.navSize)].size = Number(el.value) || 14;
+          siteDirtyMsg();
+        });
+      });
+      box.querySelectorAll("[data-nav-color]").forEach((el) => {
+        el.addEventListener("input", () => {
+          const i = Number(el.dataset.navColor);
+          content.site.navItems[i].color = el.value;
+          const hex = box.querySelector(`[data-nav-hex="${i}"]`);
+          if (hex) hex.value = el.value;
+          siteDirtyMsg();
+        });
+      });
+      box.querySelectorAll("[data-nav-hex]").forEach((el) => {
+        el.addEventListener("change", () => {
+          const i = Number(el.dataset.navHex);
+          let v = el.value.trim();
+          if (/^[0-9a-fA-F]{6}$/.test(v)) v = `#${v}`;
+          if (!/^#[0-9a-fA-F]{6}$/.test(v)) v = "#f7f0e3";
+          el.value = v;
+          content.site.navItems[i].color = v;
+          const picker = box.querySelector(`[data-nav-color="${i}"]`);
+          if (picker) picker.value = v;
+          siteDirtyMsg();
+        });
+      });
+      box.querySelectorAll("[data-del-nav]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          content.site.navItems.splice(Number(btn.dataset.delNav), 1);
+          renderNavEditor();
+          siteDirtyMsg();
+        });
+      });
+    }
+
+    function renderTickerEditor() {
+      ensureSite();
+      const box = $("tickerItems");
+      if (!content.site.tickerItems.length) {
+        box.innerHTML = `<p style="color:#64748b;font-size:.85rem">هنوز تکه‌ای نیست.</p>`;
+        return;
+      }
+      box.innerHTML = content.site.tickerItems
+        .map((item, i) => {
+          const color = item.color || "#f7f0e3";
+          const presets = TICKER_PRESETS.map(
+            (p) =>
+              `<option value="${p.value}" ${p.value.toLowerCase() === color.toLowerCase() ? "selected" : ""}>${p.label}</option>`
+          ).join("");
+          return `
+        <div class="row" style="margin-bottom:.55rem;align-items:center;gap:.45rem">
+          <input data-ticker-text="${i}" value="${esc(item.text)}" style="flex:1;min-width:140px" />
+          <select data-ticker-preset="${i}" style="width:7.5rem" title="رنگ آماده">
+            <option value="__custom__">سفارشی</option>
+            ${presets}
+          </select>
+          <input data-ticker-color="${i}" type="color" value="${/^#[0-9a-fA-F]{6}$/.test(color) ? color : "#f7f0e3"}" title="انتخاب رنگ" style="width:2.4rem;height:2.2rem;padding:0;border:0;background:transparent;cursor:pointer" />
+          <input data-ticker-hex="${i}" value="${esc(color)}" dir="ltr" style="width:5.6rem" title="کد رنگ" />
+          <button class="btn danger sm" type="button" data-del-ticker="${i}">حذف</button>
+        </div>`;
+        })
+        .join("");
+
+      const syncPreset = (i) => {
+        const item = content.site.tickerItems[i];
+        const sel = box.querySelector(`[data-ticker-preset="${i}"]`);
+        if (!sel || !item) return;
+        const match = TICKER_PRESETS.some((p) => p.value.toLowerCase() === String(item.color || "").toLowerCase());
+        sel.value = match ? item.color : "__custom__";
+      };
+
+      box.querySelectorAll("[data-ticker-text]").forEach((el) => {
+        el.addEventListener("input", () => {
+          const i = Number(el.dataset.tickerText);
+          content.site.tickerItems[i].text = el.value;
+          siteDirtyMsg();
+        });
+      });
+      box.querySelectorAll("[data-ticker-color]").forEach((el) => {
+        el.addEventListener("input", () => {
+          const i = Number(el.dataset.tickerColor);
+          content.site.tickerItems[i].color = el.value;
+          const hex = box.querySelector(`[data-ticker-hex="${i}"]`);
+          if (hex) hex.value = el.value;
+          syncPreset(i);
+          siteDirtyMsg();
+        });
+      });
+      box.querySelectorAll("[data-ticker-hex]").forEach((el) => {
+        el.addEventListener("change", () => {
+          const i = Number(el.dataset.tickerHex);
+          let v = el.value.trim();
+          if (/^[0-9a-fA-F]{6}$/.test(v)) v = `#${v}`;
+          if (!/^#[0-9a-fA-F]{6}$/.test(v)) v = "#f7f0e3";
+          el.value = v;
+          content.site.tickerItems[i].color = v;
+          const picker = box.querySelector(`[data-ticker-color="${i}"]`);
+          if (picker) picker.value = v;
+          syncPreset(i);
+          siteDirtyMsg();
+        });
+      });
+      box.querySelectorAll("[data-ticker-preset]").forEach((el) => {
+        el.addEventListener("change", () => {
+          const i = Number(el.dataset.tickerPreset);
+          if (el.value === "__custom__") return;
+          content.site.tickerItems[i].color = el.value;
+          const picker = box.querySelector(`[data-ticker-color="${i}"]`);
+          const hex = box.querySelector(`[data-ticker-hex="${i}"]`);
+          if (picker) picker.value = el.value;
+          if (hex) hex.value = el.value;
+          siteDirtyMsg();
+        });
+      });
+      box.querySelectorAll("[data-del-ticker]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          content.site.tickerItems.splice(Number(btn.dataset.delTicker), 1);
+          renderTickerEditor();
+          siteDirtyMsg();
+        });
+      });
+
+      content.site.tickerItems.forEach((_, i) => syncPreset(i));
+    }
+
+    $("siteDefaultFont")?.addEventListener("change", (e) => {
+      ensureSite();
+      content.site.defaultFont = e.target.value;
+      siteDirtyMsg();
+    });
+    $("tickerSpeed")?.addEventListener("input", (e) => {
+      ensureSite();
+      const n = Math.max(1, Math.min(10, Number(e.target.value) || 5));
+      content.site.tickerSpeed = n;
+      if ($("tickerSpeedVal")) $("tickerSpeedVal").textContent = toFaDigits(n);
+      siteDirtyMsg();
+    });
+    $("addNavItem")?.addEventListener("click", () => {
+      ensureSite();
+      content.site.navItems.push({
+        label: "آیتم جدید",
+        href: "#",
+        font: content.site.defaultFont || "Graphik Arabic",
+        size: 14,
+        color: "#f7f0e3",
+        variant: "link",
+      });
+      renderNavEditor();
+      siteDirtyMsg();
+    });
+    $("addTickerItem")?.addEventListener("click", () => {
+      ensureSite();
+      content.site.tickerItems.push({ text: "متن جدید نوار", color: "#f7f0e3" });
+      renderTickerEditor();
+      siteDirtyMsg();
+    });
+
+    ["seoTitle", "seoDescription", "seoKeywords", "seoCanonical", "seoOgImage"].forEach((id) => {
+      $(id)?.addEventListener("input", () => {
+        ensureSite();
+        content.site.seo = content.site.seo || {};
+        const map = {
+          seoTitle: "title",
+          seoDescription: "description",
+          seoKeywords: "keywords",
+          seoCanonical: "canonicalUrl",
+          seoOgImage: "ogImage",
+        };
+        content.site.seo[map[id]] = $(id).value;
+        siteDirtyMsg();
+      });
+    });
+
+    ["footerBrand", "footerTagline", "footerAddress", "footerPhone"].forEach((id) => {
+      $(id)?.addEventListener("input", () => {
+        ensureSite();
+        const map = {
+          footerBrand: "brand",
+          footerTagline: "tagline",
+          footerAddress: "address",
+          footerPhone: "phone",
+        };
+        content.site.footer[map[id]] = $(id).value;
+        siteDirtyMsg();
+      });
+    });
+
+    $("addFooterInfo")?.addEventListener("click", () => {
+      ensureSite();
+      content.site.footer.infos.push(
+        normalizeFooterInfo({
+          label: "توضیح جدید",
+          title: "عنوان توضیح",
+          body: "متن توضیح را اینجا بنویسید.",
+        })
+      );
+      renderFooterEditor();
+      siteDirtyMsg();
+    });
+
+    function renderPosts() {
+      const box = $("postsList");
+      if (!content.posts.length) {
+        box.innerHTML = `<div class="card"><p style="color:#64748b;margin:0">هنوز مقاله‌ای نیست. با «مقاله جدید» شروع کنید.</p></div>`;
+        return;
+      }
+      box.innerHTML = content.posts
+        .map(
+          (p, i) => `
+        <div class="card" style="margin-top:.55rem" data-post="${p.id}">
+          <div class="grid-2">
+            <div class="field"><label>عنوان</label><input data-p="title" value="${esc(p.title)}" /></div>
+            <div class="field"><label>اسلاگ (URL)</label><input data-p="slug" dir="ltr" value="${esc(p.slug)}" /></div>
+          </div>
+          <div class="grid-2">
+            <div class="field"><label>تاریخ انتشار</label><input data-p="publishedAt" type="date" value="${esc((p.publishedAt || "").slice(0, 10))}" /></div>
+            <div class="field"><label>وضعیت</label>
+              <select data-p="published">
+                <option value="true" ${p.published !== false ? "selected" : ""}>منتشر</option>
+                <option value="false" ${p.published === false ? "selected" : ""}>پیش‌نویس</option>
+              </select>
+            </div>
+          </div>
+          <div class="field"><label>عکس مقاله</label>
+            <div class="row" style="align-items:center;gap:.6rem;flex-wrap:wrap">
+              ${
+                p.image
+                  ? `<img src="/posters/${esc(p.image)}" alt="" style="width:56px;height:56px;object-fit:cover;border-radius:.45rem;border:1px solid #dbe7e4" />`
+                  : `<span class="meta">بدون عکس</span>`
+              }
+              <input type="file" accept="image/*" data-post-image="${esc(p.id)}" style="max-width:14rem" />
+              ${p.image ? `<button class="btn danger sm" type="button" data-clear-image="${esc(p.id)}">حذف عکس</button>` : ""}
+            </div>
+            <p class="hint" style="margin:.25rem 0 0">عکس روی کارت مقالات لندینگ و صفحه بلاگ نشان داده می‌شود.</p>
+          </div>
+          <div class="field"><label>خلاصه</label><textarea data-p="excerpt" rows="2">${esc(p.excerpt)}</textarea></div>
+          <div class="field"><label>متن مقاله (پاراگراف‌ها با خط خالی جدا شوند)</label><textarea data-p="body" rows="7">${esc(p.body)}</textarea></div>
+          <div class="row">
+            <a class="btn ghost sm" href="/blog/${encodeURIComponent(p.slug || "")}" target="_blank">مشاهده</a>
+            <button class="btn danger sm" type="button" data-del-post="${i}">حذف</button>
+          </div>
+        </div>`
+        )
+        .join("");
+
+      box.querySelectorAll("[data-post]").forEach((card) => {
+        const post = content.posts.find((x) => x.id === card.dataset.post);
+        if (!post) return;
+        card.querySelectorAll("[data-p]").forEach((el) => {
+          el.addEventListener("input", () => {
+            const key = el.dataset.p;
+            if (key === "published") post.published = el.value === "true";
+            else post[key] = el.value;
+          });
+          el.addEventListener("change", () => {
+            const key = el.dataset.p;
+            if (key === "published") post.published = el.value === "true";
+            else post[key] = el.value;
+          });
+        });
+      });
+
+      box.querySelectorAll("[data-post-image]").forEach((input) => {
+        input.addEventListener("change", async () => {
+          const post = content.posts.find((x) => x.id === input.dataset.postImage);
+          const file = input.files?.[0];
+          if (!post || !file) return;
+          const fd = new FormData();
+          fd.append("file", file);
+          const res = await fetch("/api/admin/post-image", { method: "POST", body: fd });
+          if (!res.ok) {
+            alert("آپلود عکس ناموفق بود");
+            input.value = "";
+            return;
+          }
+          const data = await res.json();
+          post.image = data.file;
+          renderPosts();
+          $("saveMsg").textContent = "عکس اضافه شد — برای اعمال نهایی «ذخیره همه» را بزنید";
+          $("saveMsg").className = "ok";
+        });
+      });
+
+      box.querySelectorAll("[data-clear-image]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const post = content.posts.find((x) => x.id === btn.dataset.clearImage);
+          if (!post) return;
+          post.image = null;
+          renderPosts();
+          $("saveMsg").textContent = "عکس حذف شد — «ذخیره همه» را بزنید";
+          $("saveMsg").className = "ok";
+        });
+      });
+
+      box.querySelectorAll("[data-del-post]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          if (!confirm("این مقاله حذف شود؟")) return;
+          content.posts.splice(Number(btn.dataset.delPost), 1);
+          renderPosts();
+        });
+      });
+    }
+
+    $("addPost").addEventListener("click", () => {
+      const title = "مقاله جدید";
+      content.posts.unshift({
+        id: `post-${Date.now().toString(36)}`,
+        slug: slugify(title) + "-" + Date.now().toString(36).slice(-3),
+        title,
+        excerpt: "",
+        body: "",
+        image: null,
+        published: true,
+        publishedAt: new Date().toISOString().slice(0, 10),
+      });
+      renderPosts();
+    });
+
+    function selected() {
+      return content.sections.find((s) => s.id === selectedId) || null;
+    }
+
+    function moveSection(fromId, toId) {
+      if (!fromId || !toId || fromId === toId) return;
+      const from = content.sections.findIndex((s) => s.id === fromId);
+      const to = content.sections.findIndex((s) => s.id === toId);
+      if (from < 0 || to < 0) return;
+      const [item] = content.sections.splice(from, 1);
+      content.sections.splice(to, 0, item);
+      renderList();
+      renderEditor();
+    }
+
+    function renderList() {
+      const box = $("sectionList");
+      box.innerHTML = content.sections
+        .map(
+          (s, i) => `
+        <div class="sec-item ${s.id === selectedId ? "active" : ""}" data-id="${s.id}" draggable="true">
+          <div class="drag-handle" title="بکشید و جابه‌جا کنید">⋮⋮</div>
+          <div class="sec-body">
+            <div class="row" style="justify-content:space-between">
+              <strong>${SECTION_LABELS[s.type] || s.type}</strong>
+              <span class="meta">${s.visible === false ? "مخفی" : "نمایش"}</span>
+            </div>
+            <div class="meta">${s.data?.title || s.data?.headline || s.id}</div>
+          </div>
+          <button class="btn danger sm" data-act="del" data-i="${i}">حذف</button>
+        </div>`
+        )
+        .join("");
+
+      let dragId = null;
+
+      box.querySelectorAll(".sec-item").forEach((el) => {
+        el.addEventListener("click", (e) => {
+          if (e.target.closest("button")) return;
+          selectedId = el.dataset.id;
+          renderList();
+          renderEditor();
+        });
+
+        el.addEventListener("dragstart", (e) => {
+          dragId = el.dataset.id;
+          el.classList.add("dragging");
+          e.dataTransfer.effectAllowed = "move";
+          e.dataTransfer.setData("text/plain", dragId);
+        });
+        el.addEventListener("dragend", () => {
+          dragId = null;
+          box.querySelectorAll(".sec-item").forEach((n) => n.classList.remove("dragging", "drag-over"));
+        });
+        el.addEventListener("dragover", (e) => {
+          e.preventDefault();
+          e.dataTransfer.dropEffect = "move";
+          box.querySelectorAll(".sec-item").forEach((n) => n.classList.remove("drag-over"));
+          if (el.dataset.id !== dragId) el.classList.add("drag-over");
+        });
+        el.addEventListener("dragleave", () => el.classList.remove("drag-over"));
+        el.addEventListener("drop", (e) => {
+          e.preventDefault();
+          const fromId = e.dataTransfer.getData("text/plain") || dragId;
+          const toId = el.dataset.id;
+          el.classList.remove("drag-over");
+          moveSection(fromId, toId);
+        });
+      });
+
+      box.querySelectorAll("button[data-act='del']").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const i = Number(btn.dataset.i);
+          if (!confirm("این سکشن حذف شود؟")) return;
+          const removed = content.sections.splice(i, 1)[0];
+          if (selectedId === removed?.id) selectedId = content.sections[0]?.id || null;
+          renderList();
+          renderEditor();
+        });
+      });
+    }
+
+    $("addSection").addEventListener("click", () => {
+      const type = $("addType").value;
+      const sec = defaultSection(type);
+      content.sections.push(sec);
+      selectedId = sec.id;
+      renderList();
+      renderEditor();
+    });
+
+    function numField(key, label, value) {
+      return `<div class="field"><label>${label}</label><input type="number" data-style="${key}" value="${Number(value) || 0}" /></div>`;
+    }
+
+    function fontOptionsHtml(selected) {
+      return fontOptionsGroupedHtml(selected || "Graphik Arabic");
+    }
+
+    function fontSelect(attr, selected, label = "فونت") {
+      return `<div class="font-row"><label>${label}</label><select ${attr}>${fontOptionsHtml(selected)}</select></div>`;
+    }
+
+    function normHex(value, fallback = "#f7f0e3") {
+      return /^#[0-9a-fA-F]{6}$/i.test(String(value || "")) ? String(value) : fallback;
+    }
+
+    function colorSelect(attr, value, fallback = "#f7f0e3") {
+      const has = /^#[0-9a-fA-F]{6}$/i.test(String(value || ""));
+      return `<div class="color-row"><label>رنگ</label><input type="color" ${attr} value="${has ? value : fallback}" ${has ? "" : 'data-color-unset="1"'} /></div>`;
+    }
+
+    function typeControls({ fontAttr, fontVal, colorAttr, colorVal, colorFallback = "#f7f0e3" }) {
+      return `<div class="type-controls">
+        ${fontSelect(fontAttr, fontVal)}
+        ${colorSelect(colorAttr, colorVal, colorFallback)}
+      </div>`;
+    }
+
+    function edBox(title, inner) {
+      return `<div class="ed-box"><p class="ed-box-title">${title}</p>${inner}</div>`;
+    }
+
+    function edGrid(inner, cols = 2) {
+      const cls = cols === 3 ? "ed-grid cols-3" : cols === 1 ? "ed-grid cols-1" : "ed-grid";
+      return `<div class="${cls}">${inner}</div>`;
+    }
+
+    function plainField({ label, dataKey, value = "", rows = 0, dir, type = "text" }) {
+      const input = rows
+        ? `<textarea data-d="${dataKey}" rows="${rows}" ${dir ? `dir="${dir}"` : ""}>${esc(value)}</textarea>`
+        : `<input type="${type}" data-d="${dataKey}" value="${esc(value)}" ${dir ? `dir="${dir}"` : ""} />`;
+      return `<div class="field"><label>${label}</label>${input}</div>`;
+    }
+
+    function colorField(label, key, value) {
+      const v = value || "#ffffff";
+      return `<div class="field ed-color"><label>${label}</label>
+        <div class="row">
+          <input type="color" data-d="${key}" value="${esc(v)}" />
+          <input data-d="${key}" value="${esc(v)}" dir="ltr" style="flex:1" />
+        </div>
+      </div>`;
+    }
+
+    function textWithFont({ label, dataKey, value, rows = 0, fontKey, fallbackFont, dir, fontOnly = false, colorFallback }) {
+      const sec = selected();
+      const fonts = sec?.data?.fonts || {};
+      const colors = sec?.data?.colors || {};
+      const key = fontKey || dataKey;
+      const fontVal = fonts[key] || fallbackFont || "Graphik Arabic";
+      const colorVal = colors[key] || "";
+      const autoFallback =
+        /title|headline|eyebrow/i.test(key) ? "#d4af37"
+        : /button|cta|link|more|submit/i.test(key) ? "#062a32"
+        : "#f7f0e3";
+      const body = fontOnly
+        ? `<p class="font-preview">فونت و رنگ را انتخاب کنید</p>`
+        : rows
+          ? `<textarea data-d="${dataKey}" rows="${rows}" ${dir ? `dir="${dir}"` : ""}>${esc(value)}</textarea>`
+          : `<input data-d="${dataKey}" value="${esc(value)}" ${dir ? `dir="${dir}"` : ""} />`;
+      return `
+        <div class="text-with-font">
+          <div class="twf-head">
+            <label>${label}</label>
+            ${typeControls({
+              fontAttr: `data-font-field="${key}"`,
+              fontVal,
+              colorAttr: `data-color-field="${key}"`,
+              colorVal,
+              colorFallback: colorFallback || autoFallback,
+            })}
+          </div>
+          ${body}
+        </div>`;
+    }
+
+    function renderEditor() {
+      const sec = selected();
+      if (!sec) {
+        $("editor").classList.add("hidden");
+        $("emptyEditor").classList.remove("hidden");
+        return;
+      }
+      $("emptyEditor").classList.add("hidden");
+      $("editor").classList.remove("hidden");
+      if (!sec.data) sec.data = {};
+      if (!sec.data.fonts) sec.data.fonts = {};
+      if (!sec.data.colors) sec.data.colors = {};
+      if (!sec.style) sec.style = {};
+
+      const d = sec.data;
+      const st = sec.style;
+      const align = ["right", "left", "center", "justify"].includes(st.textAlign) ? st.textAlign : "right";
+      let fields = `
+        <div class="ed-toolbar">
+          <div class="field"><label>نمایش در سایت</label>
+            <select data-vis>
+              <option value="true" ${sec.visible !== false ? "selected" : ""}>بله</option>
+              <option value="false" ${sec.visible === false ? "selected" : ""}>خیر</option>
+            </select>
+          </div>
+          <div class="field"><label>تراز متن</label>
+            <select data-style-align="textAlign">
+              <option value="right" ${align === "right" ? "selected" : ""}>راست‌چین</option>
+              <option value="center" ${align === "center" ? "selected" : ""}>وسط‌چین</option>
+              <option value="left" ${align === "left" ? "selected" : ""}>چپ‌چین</option>
+              <option value="justify" ${align === "justify" ? "selected" : ""}>جاستیفای (دوطرفه)</option>
+            </select>
+          </div>
+        </div>`;
+
+      if (sec.type === "hero") {
+        fields += edGrid(`
+          ${edBox("متن اصلی", `
+            ${textWithFont({ label: "بالانویس", dataKey: "kicker", value: d.kicker || "با اعتبار سایناگلد", fallbackFont: st.bodyFont })}
+            ${textWithFont({ label: "عنوان", dataKey: "headline", value: d.headline, fallbackFont: st.titleFont })}
+            ${textWithFont({ label: "توضیح", dataKey: "subheadline", value: d.subheadline, rows: 3, fallbackFont: st.bodyFont })}
+          `)}
+          ${edBox("دکمه فراخوان", `
+            ${textWithFont({ label: "متن دکمه", dataKey: "ctaLabel", value: d.ctaLabel, fallbackFont: st.buttonFont || st.titleFont })}
+            ${plainField({ label: "لینک دکمه", dataKey: "ctaHref", value: d.ctaHref, dir: "ltr" })}
+          `)}
+        `);
+      } else if (sec.type === "text" || sec.type === "text_box") {
+        fields += edGrid(`
+          ${edBox("محتوا", `
+            ${textWithFont({ label: "عنوان", dataKey: "title", value: d.title, fallbackFont: st.titleFont })}
+            ${textWithFont({ label: "توضیحات", dataKey: "body", value: d.body, rows: 4, fallbackFont: st.bodyFont })}
+          `)}
+          ${sec.type === "text_box"
+            ? edBox("لینک اختیاری", `
+                ${textWithFont({ label: "متن لینک", dataKey: "linkLabel", value: d.linkLabel, fallbackFont: st.buttonFont || st.titleFont })}
+                ${plainField({ label: "آدرس لینک", dataKey: "linkHref", value: d.linkHref, dir: "ltr" })}
+              `)
+            : edBox("نکته", `<p class="hint" style="margin:0">برای لینک جداگانه از نوع «باکس متن» استفاده کنید.</p>`)}
+        `);
+      } else if (sec.type === "text_image") {
+        const side = d.imageSide === "left" ? "left" : "right";
+        fields += edGrid(`
+          ${edBox("متن", `
+            ${textWithFont({ label: "عنوان", dataKey: "title", value: d.title, fallbackFont: st.titleFont })}
+            ${textWithFont({ label: "توضیحات", dataKey: "body", value: d.body, rows: 5, fallbackFont: st.bodyFont })}
+            ${textWithFont({ label: "متن لینک (اختیاری)", dataKey: "linkLabel", value: d.linkLabel, fallbackFont: st.buttonFont || st.titleFont })}
+            ${plainField({ label: "آدرس لینک", dataKey: "linkHref", value: d.linkHref || "", dir: "ltr" })}
+          `)}
+          ${edBox("عکس و جای آن", `
+            <div class="field"><label>سمت عکس</label>
+              <select data-d="imageSide">
+                <option value="right" ${side === "right" ? "selected" : ""}>سمت راست</option>
+                <option value="left" ${side === "left" ? "selected" : ""}>سمت چپ</option>
+              </select>
+            </div>
+            <p class="hint">یک عکس از کتابخانه انتخاب کنید.</p>
+            <div class="media-grid" id="splitPick">${(content.media || [])
+              .map(
+                (m) => `
+              <label>
+                <input type="radio" name="splitMedia" data-media-one="${m.id}" ${d.mediaId === m.id ? "checked" : ""} />
+                <img src="/posters/${m.file}" alt="" />
+              </label>`
+              )
+              .join("") || "<p class='hint'>اول از تب کتابخانه پوستر آپلود کنید.</p>"}</div>
+            ${d.mediaId ? `<button class="btn danger sm" type="button" id="clearSplitMedia" style="margin-top:.35rem">حذف انتخاب عکس</button>` : ""}
+          `)}
+        `);
+      } else if (sec.type === "posters") {
+        const fx = d.effect || "tilt";
+        fields += edGrid(`
+          ${edBox("متن و افکت", `
+            ${textWithFont({ label: "عنوان", dataKey: "title", value: d.title, fallbackFont: st.titleFont })}
+            ${textWithFont({ label: "توضیح", dataKey: "subtitle", value: d.subtitle, rows: 2, fallbackFont: st.bodyFont })}
+            <div class="field"><label>افکت پوستر</label>
+              <select data-d="effect">
+                <option value="none" ${fx === "none" ? "selected" : ""}>بدون افکت</option>
+                <option value="tilt" ${fx === "tilt" ? "selected" : ""}>چرخش سه‌بعدی با موس</option>
+                <option value="zoom" ${fx === "zoom" ? "selected" : ""}>زوم نرم روی هاور</option>
+                <option value="shine" ${fx === "shine" ? "selected" : ""}>درخشش دنبال‌کننده موس</option>
+                <option value="lift" ${fx === "lift" ? "selected" : ""}>بالا آمدن با سایه</option>
+                <option value="float" ${fx === "float" ? "selected" : ""}>شناور شدن آرام</option>
+              </select>
+            </div>
+          `)}
+          ${edBox("انتخاب پوستر", `
+            <div class="media-grid" id="posterPick">${(content.media || [])
+              .map(
+                (m) => `
+              <label>
+                <input type="checkbox" data-media-id="${m.id}" ${(d.mediaIds || []).includes(m.id) ? "checked" : ""} />
+                <img src="/posters/${m.file}" alt="" />
+              </label>`
+              )
+              .join("") || "<p class='hint'>اول از تب کتابخانه پوستر آپلود کنید.</p>"}</div>
+          `)}
+        `);
+      } else if (sec.type === "features") {
+        fields += edBox("عنوان بخش", textWithFont({ label: "عنوان", dataKey: "title", value: d.title, fallbackFont: st.titleFont }));
+        fields += `<div class="ed-item-list">`;
+        (d.items || []).forEach((item, i) => {
+          fields += `
+            <div class="ed-item">
+              <div class="ed-item-head">
+                <strong>آیتم ${toFaDigits(i + 1)}</strong>
+                <button class="btn danger sm" type="button" data-del-feature="${i}">حذف</button>
+              </div>
+              <div class="ed-inline">
+                <div class="text-with-font">
+                  <div class="twf-head">
+                    <label>عنوان</label>
+                    ${typeControls({
+                      fontAttr: `data-item-title-font="${i}"`,
+                      fontVal: item.titleFont || st.titleFont || "Graphik Arabic",
+                      colorAttr: `data-item-title-color="${i}"`,
+                      colorVal: item.titleColor || "",
+                      colorFallback: "#d4af37",
+                    })}
+                  </div>
+                  <input data-item-t="${i}" value="${esc(item.title)}" />
+                </div>
+                <div class="text-with-font">
+                  <div class="twf-head">
+                    <label>توضیح</label>
+                    <div class="type-controls">
+                      ${fontSelect(`data-item-body-font="${i}"`, item.bodyFont || st.bodyFont || "Graphik Arabic")}
+                      ${colorSelect(`data-item-body-color="${i}"`, item.bodyColor || "", "#f7f0e3")}
+                      <div class="font-row">
+                        <label>تراز</label>
+                        <select data-item-body-align="${i}">
+                          <option value="right" ${(item.bodyAlign || align) === "right" ? "selected" : ""}>راست</option>
+                          <option value="center" ${(item.bodyAlign || align) === "center" ? "selected" : ""}>وسط</option>
+                          <option value="left" ${(item.bodyAlign || align) === "left" ? "selected" : ""}>چپ</option>
+                          <option value="justify" ${(item.bodyAlign || align) === "justify" ? "selected" : ""}>جاستیفای</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <textarea data-item-b="${i}" rows="2">${esc(item.body)}</textarea>
+                </div>
+              </div>
+            </div>`;
+        });
+        fields += `</div><button class="btn ghost sm" type="button" id="addFeatureItem">+ آیتم ویژگی</button>`;
+      } else if (sec.type === "blog") {
+        fields += edGrid(`
+          ${edBox("متن بخش", `
+            ${textWithFont({ label: "عنوان", dataKey: "title", value: d.title, fallbackFont: st.titleFont })}
+            ${textWithFont({ label: "توضیح", dataKey: "subtitle", value: d.subtitle, rows: 2, fallbackFont: st.bodyFont })}
+          `)}
+          ${edBox("نمایش و دکمه", `
+            ${plainField({ label: "تعداد در لندینگ", dataKey: "limit", value: Number(d.limit) || 3, type: "number" })}
+            ${textWithFont({ label: "متن دکمه", dataKey: "moreLabel", value: d.moreLabel, fallbackFont: st.buttonFont || st.titleFont })}
+            ${plainField({ label: "لینک دکمه", dataKey: "moreHref", value: d.moreHref || "/blog", dir: "ltr" })}
+            <p class="hint">متن مقالات از تب «مقالات» مدیریت می‌شود.</p>
+          `)}
+        `);
+      } else if (sec.type === "cta") {
+        fields += edGrid(`
+          ${edBox("متن فراخوان", `
+            ${textWithFont({ label: "عنوان", dataKey: "title", value: d.title, fallbackFont: st.titleFont })}
+            ${textWithFont({ label: "توضیح", dataKey: "body", value: d.body, rows: 3, fallbackFont: st.bodyFont })}
+          `)}
+          ${edBox("دکمه", `
+            ${textWithFont({ label: "متن دکمه", dataKey: "buttonLabel", value: d.buttonLabel, fallbackFont: st.buttonFont || st.titleFont })}
+            ${plainField({ label: "لینک دکمه", dataKey: "buttonHref", value: d.buttonHref, dir: "ltr" })}
+          `)}
+        `);
+      } else if (sec.type === "links") {
+        fields += edBox("عنوان بخش", textWithFont({ label: "عنوان", dataKey: "title", value: d.title, fallbackFont: st.titleFont }));
+        fields += `<div class="ed-item-list">`;
+        (d.items || []).forEach((item, i) => {
+          fields += `
+            <div class="ed-item">
+              <div class="ed-item-head">
+                <strong>لینک ${toFaDigits(i + 1)}</strong>
+                <button class="btn danger sm" type="button" data-del-link="${i}">حذف</button>
+              </div>
+              <div class="ed-inline">
+                <div class="text-with-font">
+                  <div class="twf-head">
+                    <label>متن</label>
+                    ${typeControls({
+                      fontAttr: `data-link-font="${i}"`,
+                      fontVal: item.font || st.buttonFont || st.titleFont || "Graphik Arabic",
+                      colorAttr: `data-link-color="${i}"`,
+                      colorVal: item.color || "",
+                      colorFallback: "#f7f0e3",
+                    })}
+                  </div>
+                  <input data-link-l="${i}" value="${esc(item.label)}" />
+                </div>
+                <div class="field"><label>آدرس</label><input data-link-h="${i}" value="${esc(item.href)}" dir="ltr" /></div>
+              </div>
+            </div>`;
+        });
+        fields += `</div><button class="btn ghost sm" type="button" id="addLinkItem">+ لینک</button>`;
+      } else if (sec.type === "register") {
+        fields += edGrid(`
+          ${edBox("متن معرفی", `
+            ${textWithFont({ label: "بالانویس", dataKey: "eyebrow", value: d.eyebrow, fallbackFont: st.bodyFont })}
+            ${textWithFont({ label: "عنوان", dataKey: "title", value: d.title, fallbackFont: st.titleFont })}
+            ${textWithFont({ label: "توضیح", dataKey: "body", value: d.body, rows: 3, fallbackFont: st.bodyFont })}
+            ${textWithFont({ label: "فونت و رنگ فرم و دکمه", dataKey: "form", fontKey: "form", fallbackFont: st.bodyFont, fontOnly: true })}
+          `)}
+          ${edBox("رنگ فرم", `
+            <div class="ed-stack">
+              ${colorField("پس‌زمینه فرم", "formBg", d.formBg || "#ffffff")}
+              ${colorField("رنگ متن فرم", "formText", d.formText || "#1a1a1a")}
+              ${colorField("اکسنت / فوکوس", "formAccent", d.formAccent || "#2ec4b6")}
+              ${colorField("پس‌زمینه دکمه", "formButtonBg", d.formButtonBg || "#2ec4b6")}
+              ${colorField("متن دکمه", "formButtonText", d.formButtonText || "#062a32")}
+            </div>
+          `)}
+        `);
+        fields += edBox("پاپ‌آپ بعد از ثبت موفق", `
+          <div class="ed-inline">
+            ${plainField({ label: "عنوان پاپ‌آپ", dataKey: "successTitle", value: d.successTitle || "درخواست شما ثبت شد" })}
+            ${plainField({ label: "متن دکمه / لینک", dataKey: "successLinkLabel", value: d.successLinkLabel || "مشاهده سایناگلد" })}
+          </div>
+          ${plainField({ label: "متن اصلی", dataKey: "successBody", value: d.successBody || "کارشناسان سورناگلد به زودی با شما تماس می‌گیرند.", rows: 2 })}
+          ${plainField({ label: "متن پیشنهاد سایناگلد", dataKey: "successAsk", value: d.successAsk || "تمایل دارید از بنکداری هوشمند سایناگلد نیز دیدن کنید؟", rows: 2 })}
+          ${plainField({ label: "آدرس لینک", dataKey: "successLinkUrl", value: d.successLinkUrl || "https://sainagold.com", dir: "ltr" })}
+        `);
+      } else if (sec.type === "spacer") {
+        fields += edBox("فاصله خالی", `<p class="hint" style="margin:0">فقط ارتفاع را از پنل «اندازه، فاصله و باکس» تنظیم کنید.</p>`);
+      }
+
+      $("contentFields").innerHTML = fields;
+      $("styleFields").innerHTML = [
+        `<div class="field" style="grid-column:1/-1">
+          <label>پیش‌فرض عنوان سکشن</label>
+          ${typeControls({
+            fontAttr: `data-style-font="titleFont"`,
+            fontVal: st.titleFont || "Graphik Arabic",
+            colorAttr: `data-style-color="titleColor"`,
+            colorVal: st.titleColor || "",
+            colorFallback: "#d4af37",
+          })}
+        </div>`,
+        `<div class="field" style="grid-column:1/-1">
+          <label>پیش‌فرض متن سکشن</label>
+          ${typeControls({
+            fontAttr: `data-style-font="bodyFont"`,
+            fontVal: st.bodyFont || "Graphik Arabic",
+            colorAttr: `data-style-color="bodyColor"`,
+            colorVal: st.bodyColor || "",
+            colorFallback: "#f7f0e3",
+          })}
+        </div>`,
+        `<div class="field" style="grid-column:1/-1">
+          <label>پیش‌فرض دکمه</label>
+          ${typeControls({
+            fontAttr: `data-style-font="buttonFont"`,
+            fontVal: st.buttonFont || st.titleFont || "Graphik Arabic",
+            colorAttr: `data-style-color="buttonColor"`,
+            colorVal: st.buttonColor || "",
+            colorFallback: "#062a32",
+          })}
+        </div>`,
+        numField("paddingTop", "فاصله بالا (px)", st.paddingTop),
+        numField("paddingBottom", "فاصله پایین (px)", st.paddingBottom),
+        numField("paddingX", "فاصله چپ/راست (px)", st.paddingX),
+        numField("gap", "فاصله داخلی / gap (px)", st.gap),
+        numField("maxWidth", "حداکثر عرض محتوا (px)", st.maxWidth),
+        numField("minHeight", "حداقل ارتفاع (px یا svh برای هیرو)", st.minHeight),
+        numField("titleSize", "اندازه عنوان (px)", st.titleSize),
+        numField("textSize", "اندازه متن (px)", st.textSize),
+        numField("boxWidth", "عرض باکس (%)", st.boxWidth),
+      ].join("");
+
+      bindEditorEvents(sec);
+    }
+
+    function esc(v) {
+      return String(v ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/"/g, "&quot;")
+        .replace(/</g, "&lt;");
+    }
+
+    function onEdit(el, fn) {
+      el.addEventListener("input", fn);
+      el.addEventListener("change", fn);
+    }
+
+    function bindEditorEvents(sec) {
+      $("contentFields").querySelector("[data-vis]")?.addEventListener("change", (e) => {
+        sec.visible = e.target.value === "true";
+        renderList();
+      });
+      $("contentFields").querySelectorAll("[data-d]").forEach((el) => {
+        onEdit(el, () => {
+          const key = el.dataset.d;
+          sec.data[key] = key === "limit" ? Number(el.value) || 0 : el.value;
+          // همگام‌سازی color picker با فیلد متنی هم‌کلید
+          $("contentFields").querySelectorAll(`[data-d="${key}"]`).forEach((sib) => {
+            if (sib !== el) sib.value = el.value;
+          });
+          renderList();
+        });
+      });
+      $("contentFields").querySelectorAll("[data-item-t]").forEach((el) => {
+        onEdit(el, () => {
+          sec.data.items[Number(el.dataset.itemT)].title = el.value;
+        });
+      });
+      $("contentFields").querySelectorAll("[data-item-b]").forEach((el) => {
+        onEdit(el, () => {
+          sec.data.items[Number(el.dataset.itemB)].body = el.value;
+        });
+      });
+      $("contentFields").querySelectorAll("[data-link-l]").forEach((el) => {
+        onEdit(el, () => {
+          sec.data.items[Number(el.dataset.linkL)].label = el.value;
+        });
+      });
+      $("contentFields").querySelectorAll("[data-link-h]").forEach((el) => {
+        onEdit(el, () => {
+          sec.data.items[Number(el.dataset.linkH)].href = el.value;
+        });
+      });
+      $("contentFields").querySelectorAll("[data-media-id]").forEach((el) => {
+        el.addEventListener("change", () => {
+          const ids = [...$("contentFields").querySelectorAll("[data-media-id]:checked")].map((x) => x.dataset.mediaId);
+          sec.data.mediaIds = ids;
+        });
+      });
+      $("contentFields").querySelectorAll("[data-media-one]").forEach((el) => {
+        el.addEventListener("change", () => {
+          if (el.checked) sec.data.mediaId = el.dataset.mediaOne;
+        });
+      });
+      $("clearSplitMedia")?.addEventListener("click", () => {
+        sec.data.mediaId = null;
+        renderEditor();
+      });
+      $("addFeatureItem")?.addEventListener("click", () => {
+        sec.data.items = sec.data.items || [];
+        sec.data.items.push({ title: "ویژگی جدید", body: "توضیح" });
+        renderEditor();
+      });
+      $("contentFields").querySelectorAll("[data-del-feature]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const i = Number(btn.dataset.delFeature);
+          sec.data.items = sec.data.items || [];
+          if (i < 0 || i >= sec.data.items.length) return;
+          sec.data.items.splice(i, 1);
+          renderEditor();
+        });
+      });
+      $("addLinkItem")?.addEventListener("click", () => {
+        sec.data.items = sec.data.items || [];
+        sec.data.items.push({ label: "لینک جدید", href: "#" });
+        renderEditor();
+      });
+      $("contentFields").querySelectorAll("[data-del-link]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const i = Number(btn.dataset.delLink);
+          sec.data.items = sec.data.items || [];
+          if (i < 0 || i >= sec.data.items.length) return;
+          sec.data.items.splice(i, 1);
+          renderEditor();
+        });
+      });
+      $("styleFields").querySelectorAll("[data-style]").forEach((el) => {
+        onEdit(el, () => {
+          sec.style[el.dataset.style] = Number(el.value) || 0;
+        });
+      });
+      $("styleFields").querySelectorAll("[data-style-font]").forEach((el) => {
+        onEdit(el, () => {
+          sec.style[el.dataset.styleFont] = el.value;
+        });
+      });
+      $("styleFields").querySelectorAll("[data-style-color]").forEach((el) => {
+        onEdit(el, () => {
+          el.removeAttribute("data-color-unset");
+          sec.style[el.dataset.styleColor] = el.value;
+        });
+      });
+      $("contentFields").querySelectorAll("[data-style-align]").forEach((el) => {
+        onEdit(el, () => {
+          sec.style[el.dataset.styleAlign] = el.value;
+        });
+      });
+      $("contentFields").querySelectorAll("[data-font-field]").forEach((el) => {
+        onEdit(el, () => {
+          sec.data.fonts = sec.data.fonts || {};
+          sec.data.fonts[el.dataset.fontField] = el.value;
+        });
+      });
+      $("contentFields").querySelectorAll("[data-color-field]").forEach((el) => {
+        onEdit(el, () => {
+          el.removeAttribute("data-color-unset");
+          sec.data.colors = sec.data.colors || {};
+          sec.data.colors[el.dataset.colorField] = el.value;
+        });
+      });
+      $("contentFields").querySelectorAll("[data-item-title-font]").forEach((el) => {
+        onEdit(el, () => {
+          sec.data.items[Number(el.dataset.itemTitleFont)].titleFont = el.value;
+        });
+      });
+      $("contentFields").querySelectorAll("[data-item-body-font]").forEach((el) => {
+        onEdit(el, () => {
+          sec.data.items[Number(el.dataset.itemBodyFont)].bodyFont = el.value;
+        });
+      });
+      $("contentFields").querySelectorAll("[data-item-title-color]").forEach((el) => {
+        onEdit(el, () => {
+          el.removeAttribute("data-color-unset");
+          sec.data.items[Number(el.dataset.itemTitleColor)].titleColor = el.value;
+        });
+      });
+      $("contentFields").querySelectorAll("[data-item-body-color]").forEach((el) => {
+        onEdit(el, () => {
+          el.removeAttribute("data-color-unset");
+          sec.data.items[Number(el.dataset.itemBodyColor)].bodyColor = el.value;
+        });
+      });
+      $("contentFields").querySelectorAll("[data-item-body-align]").forEach((el) => {
+        onEdit(el, () => {
+          sec.data.items[Number(el.dataset.itemBodyAlign)].bodyAlign = el.value;
+        });
+      });
+      $("contentFields").querySelectorAll("[data-link-font]").forEach((el) => {
+        onEdit(el, () => {
+          sec.data.items[Number(el.dataset.linkFont)].font = el.value;
+        });
+      });
+      $("contentFields").querySelectorAll("[data-link-color]").forEach((el) => {
+        onEdit(el, () => {
+          el.removeAttribute("data-color-unset");
+          sec.data.items[Number(el.dataset.linkColor)].color = el.value;
+        });
+      });
+    }
+
+    /** قبل از ذخیره، مقادیر فعلی DOM را اجباری بخوان تا چیزی از قلم نیفتد */
+    function flushAllFromDom() {
+      ensureSite();
+      const sec = selected();
+      if (sec && !$("editor").classList.contains("hidden")) {
+        const vis = $("contentFields").querySelector("[data-vis]");
+        if (vis) sec.visible = vis.value === "true";
+        sec.data = sec.data || {};
+        sec.data.fonts = sec.data.fonts || {};
+        sec.data.colors = sec.data.colors || {};
+        sec.style = sec.style || {};
+
+        $("contentFields").querySelectorAll("[data-d]").forEach((el) => {
+          const key = el.dataset.d;
+          // برای جفت color/text، مقدار آخرین فیلد متنی/رنگی معتبر را بگیر
+          sec.data[key] = key === "limit" ? Number(el.value) || 0 : el.value;
+        });
+        $("contentFields").querySelectorAll("[data-font-field]").forEach((el) => {
+          sec.data.fonts[el.dataset.fontField] = el.value;
+        });
+        $("contentFields").querySelectorAll("[data-color-field]").forEach((el) => {
+          if (el.dataset.colorUnset) return;
+          sec.data.colors[el.dataset.colorField] = el.value;
+        });
+        $("contentFields").querySelectorAll("[data-style-align]").forEach((el) => {
+          sec.style[el.dataset.styleAlign] = el.value;
+        });
+        $("contentFields").querySelectorAll("[data-item-t]").forEach((el) => {
+          const i = Number(el.dataset.itemT);
+          if (sec.data.items?.[i]) sec.data.items[i].title = el.value;
+        });
+        $("contentFields").querySelectorAll("[data-item-b]").forEach((el) => {
+          const i = Number(el.dataset.itemB);
+          if (sec.data.items?.[i]) sec.data.items[i].body = el.value;
+        });
+        $("contentFields").querySelectorAll("[data-item-title-font]").forEach((el) => {
+          const i = Number(el.dataset.itemTitleFont);
+          if (sec.data.items?.[i]) sec.data.items[i].titleFont = el.value;
+        });
+        $("contentFields").querySelectorAll("[data-item-body-font]").forEach((el) => {
+          const i = Number(el.dataset.itemBodyFont);
+          if (sec.data.items?.[i]) sec.data.items[i].bodyFont = el.value;
+        });
+        $("contentFields").querySelectorAll("[data-item-title-color]").forEach((el) => {
+          const i = Number(el.dataset.itemTitleColor);
+          if (sec.data.items?.[i] && !el.dataset.colorUnset) sec.data.items[i].titleColor = el.value;
+        });
+        $("contentFields").querySelectorAll("[data-item-body-color]").forEach((el) => {
+          const i = Number(el.dataset.itemBodyColor);
+          if (sec.data.items?.[i] && !el.dataset.colorUnset) sec.data.items[i].bodyColor = el.value;
+        });
+        $("contentFields").querySelectorAll("[data-item-body-align]").forEach((el) => {
+          const i = Number(el.dataset.itemBodyAlign);
+          if (sec.data.items?.[i]) sec.data.items[i].bodyAlign = el.value;
+        });
+        $("contentFields").querySelectorAll("[data-link-l]").forEach((el) => {
+          const i = Number(el.dataset.linkL);
+          if (sec.data.items?.[i]) sec.data.items[i].label = el.value;
+        });
+        $("contentFields").querySelectorAll("[data-link-h]").forEach((el) => {
+          const i = Number(el.dataset.linkH);
+          if (sec.data.items?.[i]) sec.data.items[i].href = el.value;
+        });
+        $("contentFields").querySelectorAll("[data-link-font]").forEach((el) => {
+          const i = Number(el.dataset.linkFont);
+          if (sec.data.items?.[i]) sec.data.items[i].font = el.value;
+        });
+        $("contentFields").querySelectorAll("[data-link-color]").forEach((el) => {
+          const i = Number(el.dataset.linkColor);
+          if (sec.data.items?.[i] && !el.dataset.colorUnset) sec.data.items[i].color = el.value;
+        });
+        const mediaChecks = $("contentFields").querySelectorAll("[data-media-id]");
+        if (mediaChecks.length) {
+          sec.data.mediaIds = [...$("contentFields").querySelectorAll("[data-media-id]:checked")].map((x) => x.dataset.mediaId);
+        }
+        const mediaOne = $("contentFields").querySelector("[data-media-one]:checked");
+        if ($("contentFields").querySelector("[data-media-one]")) {
+          sec.data.mediaId = mediaOne ? mediaOne.dataset.mediaOne : null;
+        }
+        $("styleFields").querySelectorAll("[data-style]").forEach((el) => {
+          sec.style[el.dataset.style] = Number(el.value) || 0;
+        });
+        $("styleFields").querySelectorAll("[data-style-font]").forEach((el) => {
+          sec.style[el.dataset.styleFont] = el.value;
+        });
+        $("styleFields").querySelectorAll("[data-style-color]").forEach((el) => {
+          if (el.dataset.colorUnset) return;
+          sec.style[el.dataset.styleColor] = el.value;
+        });
+      }
+
+      // سایت / هدر / تیکر
+      if ($("siteDefaultFont")) content.site.defaultFont = $("siteDefaultFont").value;
+      if ($("tickerSpeed")) {
+        const n = Math.max(1, Math.min(10, Number($("tickerSpeed").value) || 5));
+        content.site.tickerSpeed = n;
+      }
+      content.site.seo = content.site.seo || {};
+      if ($("seoTitle")) content.site.seo.title = $("seoTitle").value;
+      if ($("seoDescription")) content.site.seo.description = $("seoDescription").value;
+      if ($("seoKeywords")) content.site.seo.keywords = $("seoKeywords").value;
+      if ($("seoCanonical")) content.site.seo.canonicalUrl = $("seoCanonical").value;
+      if ($("seoOgImage")) content.site.seo.ogImage = $("seoOgImage").value;
+      if (!$("tab-site").classList.contains("hidden") || content.site.navItems) {
+        $("navItems")?.querySelectorAll("[data-nav-label]").forEach((el) => {
+          const i = Number(el.dataset.navLabel);
+          if (content.site.navItems[i]) content.site.navItems[i].label = el.value;
+        });
+        $("navItems")?.querySelectorAll("[data-nav-href]").forEach((el) => {
+          const i = Number(el.dataset.navHref);
+          if (content.site.navItems[i]) content.site.navItems[i].href = el.value;
+        });
+        $("navItems")?.querySelectorAll("[data-nav-font]").forEach((el) => {
+          const i = Number(el.dataset.navFont);
+          if (content.site.navItems[i]) content.site.navItems[i].font = el.value;
+        });
+        $("navItems")?.querySelectorAll("[data-nav-variant]").forEach((el) => {
+          const i = Number(el.dataset.navVariant);
+          if (content.site.navItems[i]) content.site.navItems[i].variant = el.value;
+        });
+        $("navItems")?.querySelectorAll("[data-nav-size]").forEach((el) => {
+          const i = Number(el.dataset.navSize);
+          if (content.site.navItems[i]) content.site.navItems[i].size = Number(el.value) || 14;
+        });
+        $("navItems")?.querySelectorAll("[data-nav-hex]").forEach((el) => {
+          const i = Number(el.dataset.navHex);
+          if (content.site.navItems[i]) content.site.navItems[i].color = el.value;
+        });
+        $("tickerItems")?.querySelectorAll("[data-ticker-text]").forEach((el) => {
+          const i = Number(el.dataset.tickerText);
+          if (content.site.tickerItems[i]) content.site.tickerItems[i].text = el.value;
+        });
+        $("tickerItems")?.querySelectorAll("[data-ticker-hex]").forEach((el) => {
+          const i = Number(el.dataset.tickerHex);
+          if (content.site.tickerItems[i]) content.site.tickerItems[i].color = el.value;
+        });
+      }
+
+      // فوتر
+      ensureSite();
+      if ($("footerBrand")) content.site.footer.brand = $("footerBrand").value;
+      if ($("footerTagline")) content.site.footer.tagline = $("footerTagline").value;
+      if ($("footerAddress")) content.site.footer.address = $("footerAddress").value;
+      if ($("footerPhone")) content.site.footer.phone = $("footerPhone").value;
+      $("footerInfos")?.querySelectorAll("[data-fi-label]").forEach((el) => {
+        const i = Number(el.dataset.fiLabel);
+        if (content.site.footer.infos[i]) content.site.footer.infos[i].label = el.value;
+      });
+      $("footerInfos")?.querySelectorAll("[data-fi-title]").forEach((el) => {
+        const i = Number(el.dataset.fiTitle);
+        if (content.site.footer.infos[i]) content.site.footer.infos[i].title = el.value;
+      });
+      $("footerInfos")?.querySelectorAll("[data-fi-body]").forEach((el) => {
+        const i = Number(el.dataset.fiBody);
+        if (content.site.footer.infos[i]) content.site.footer.infos[i].body = el.value;
+      });
+
+      // مقالات
+      $("postsList")?.querySelectorAll("[data-post]").forEach((card) => {
+        const post = content.posts.find((x) => x.id === card.dataset.post);
+        if (!post) return;
+        card.querySelectorAll("[data-p]").forEach((el) => {
+          const key = el.dataset.p;
+          if (key === "published") post.published = el.value === "true";
+          else post[key] = el.value;
+        });
+      });
+
+      // همگام‌سازی لینک ورود از آیتم login
+      const loginItem = (content.site.navItems || []).find((n) => n.variant === "login");
+      if (loginItem) {
+        content.site.loginLabel = loginItem.label;
+        content.site.loginUrl = loginItem.href || "";
+      }
+    }
+
+    $("saveAll").addEventListener("click", async () => {
+      flushAllFromDom();
+      $("saveMsg").textContent = "در حال ذخیره...";
+      $("saveMsg").className = "ok";
+      const res = await fetch("/api/admin/content", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(content),
+      });
+      if (!res.ok) {
+        let err = "خطا در ذخیره";
+        try { err = (await res.json()).error || err; } catch {}
+        $("saveMsg").textContent = err;
+        $("saveMsg").className = "err";
+        return;
+      }
+      await loadContent();
+      $("saveMsg").innerHTML = 'ذخیره شد. <a href="/?t=' + Date.now() + '" target="_blank">مشاهده سایت</a>';
+      $("saveMsg").className = "ok";
+    });
+
+    function renderMediaLibrary() {
+      const box = $("mediaLibrary");
+      if (!content.media?.length) {
+        box.innerHTML = `<p style="color:#64748b">هنوز تصویری نیست.</p>`;
+        return;
+      }
+      box.innerHTML = content.media
+        .map(
+          (m) => `
+        <div>
+          <img src="/posters/${m.file}" alt="" style="width:100%;height:90px;object-fit:cover;border-radius:.5rem" />
+          <button class="btn danger sm" style="width:100%;margin-top:.3rem" data-del-media="${m.id}">حذف</button>
+        </div>`
+        )
+        .join("");
+      box.querySelectorAll("[data-del-media]").forEach((btn) => {
+        btn.addEventListener("click", async () => {
+          const res = await fetch(`/api/admin/media/${btn.dataset.delMedia}`, { method: "DELETE" });
+          const data = await res.json();
+          if (res.ok) {
+            content.media = data.media;
+            content.sections = data.sections;
+            renderMediaLibrary();
+            renderEditor();
+          }
+        });
+      });
+    }
+
+    $("mediaForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const fd = new FormData(e.currentTarget);
+      const res = await fetch("/api/admin/media", { method: "POST", body: fd });
+      const data = await res.json();
+      if (!res.ok) return alert(data.error || "خطا");
+      content.media = data.media;
+      renderMediaLibrary();
+      renderEditor();
+      e.currentTarget.reset();
+    });
+
+    const STATUS_LABELS = {
+      new: "جدید",
+      contacted: "تماس گرفته‌شده",
+      qualified: "تأییدشده",
+      rejected: "ردشده",
+    };
+
+    let leadsCache = [];
+    let leadsStatusFilter = "all";
+    const STATUS_ORDER = ["new", "contacted", "qualified", "rejected"];
+
+    function escHtml(s) {
+      return String(s ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    function jalaliParts(date) {
+      const parts = new Intl.DateTimeFormat("en-US-u-ca-persian", {
+        year: "numeric",
+        month: "numeric",
+        day: "numeric",
+      }).formatToParts(date);
+      const get = (type) => Number(parts.find((p) => p.type === type)?.value || 0);
+      return { y: get("year"), m: get("month"), d: get("day") };
+    }
+
+    function jalaliDayKey(date) {
+      const { y, m, d } = jalaliParts(date);
+      return `${y}-${String(m).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
+    }
+
+    function formatJalali(iso) {
+      if (!iso) return "—";
+      return toFaDigits(
+        new Intl.DateTimeFormat("fa-IR-u-ca-persian", {
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+          hour: "2-digit",
+          minute: "2-digit",
+          numberingSystem: "arabext",
+        }).format(new Date(iso))
+      );
+    }
+
+    function formatJalaliDayLabel(date) {
+      return toFaDigits(
+        new Intl.DateTimeFormat("fa-IR-u-ca-persian", {
+          month: "numeric",
+          day: "numeric",
+          numberingSystem: "arabext",
+        }).format(date)
+      );
+    }
+
+    function buildLastJalaliDays(n = 14) {
+      const days = [];
+      const now = new Date();
+      for (let i = n - 1; i >= 0; i--) {
+        const d = new Date(now);
+        d.setHours(12, 0, 0, 0);
+        d.setDate(d.getDate() - i);
+        days.push({ key: jalaliDayKey(d), label: formatJalaliDayLabel(d), date: d });
+      }
+      return days;
+    }
+
+    function countByStatus(leads) {
+      const byStatus = { new: 0, contacted: 0, qualified: 0, rejected: 0 };
+      leads.forEach((l) => {
+        const st = l.status || "new";
+        if (byStatus[st] != null) byStatus[st] += 1;
+        else byStatus.new += 1;
+      });
+      return byStatus;
+    }
+
+    function filteredLeads() {
+      if (leadsStatusFilter === "all") return leadsCache;
+      return leadsCache.filter((l) => (l.status || "new") === leadsStatusFilter);
+    }
+
+    function setLeadsFilter(status) {
+      leadsStatusFilter = status;
+      renderLeadsFilters();
+      renderLeadsDashboard(leadsCache);
+      renderLeadsTable();
+    }
+
+    function renderLeadsFilters() {
+      const byStatus = countByStatus(leadsCache);
+      const total = leadsCache.length;
+      const items = [
+        { key: "all", label: "همه", count: total },
+        ...STATUS_ORDER.map((key) => ({ key, label: STATUS_LABELS[key], count: byStatus[key] })),
+      ];
+      $("leadsFilters").innerHTML = `
+        <span class="filter-label">فیلتر وضعیت:</span>
+        ${items
+          .map(
+            (item) => `
+          <button type="button" class="leads-filter-btn ${leadsStatusFilter === item.key ? "active" : ""}" data-filter="${item.key}">
+            ${escHtml(item.label)}<span class="n">${toFaDigits(item.count)}</span>
+          </button>`
+          )
+          .join("")}
+      `;
+      $("leadsFilters").querySelectorAll("[data-filter]").forEach((btn) => {
+        btn.addEventListener("click", () => setLeadsFilter(btn.dataset.filter));
+      });
+    }
+
+    function renderLeadsDashboard(leads) {
+      const total = leads.length;
+      const byStatus = countByStatus(leads);
+
+      const todayKey = jalaliDayKey(new Date());
+      const todayCount = leads.filter((l) => l.createdAt && jalaliDayKey(new Date(l.createdAt)) === todayKey).length;
+
+      $("leadsDash").innerHTML = `
+        <div class="leads-stat ${leadsStatusFilter === "all" ? "active" : ""}" data-filter="all"><div class="label">کل ثبت‌نام‌ها</div><div class="value">${toFaDigits(total)}</div></div>
+        <div class="leads-stat gold"><div class="label">امروز (شمسی)</div><div class="value">${toFaDigits(todayCount)}</div></div>
+        <div class="leads-stat warn ${leadsStatusFilter === "new" ? "active" : ""}" data-filter="new"><div class="label">جدید</div><div class="value">${toFaDigits(byStatus.new)}</div></div>
+        <div class="leads-stat ok ${leadsStatusFilter === "qualified" ? "active" : ""}" data-filter="qualified"><div class="label">تأییدشده</div><div class="value">${toFaDigits(byStatus.qualified)}</div></div>
+      `;
+      $("leadsDash").querySelectorAll("[data-filter]").forEach((el) => {
+        el.addEventListener("click", () => setLeadsFilter(el.dataset.filter));
+      });
+
+      const days = buildLastJalaliDays(14);
+      const counts = Object.fromEntries(days.map((d) => [d.key, 0]));
+      leads.forEach((l) => {
+        if (!l.createdAt) return;
+        const key = jalaliDayKey(new Date(l.createdAt));
+        if (counts[key] != null) counts[key] += 1;
+      });
+      const max = Math.max(1, ...Object.values(counts));
+
+      $("leadsChart").innerHTML = days
+        .map((d) => {
+          const c = counts[d.key];
+          const h = Math.round((c / max) * 100);
+          return `<div class="leads-chart-bar" title="${escHtml(d.label)}: ${c}">
+            <span class="cnt">${c ? toFaDigits(c) : ""}</span>
+            <div class="bar" style="height:${h}%"></div>
+            <span class="day">${escHtml(d.label)}</span>
+          </div>`;
+        })
+        .join("");
+    }
+
+    function closeLeadModal() {
+      const modal = $("leadDetailModal");
+      if (modal) modal.hidden = true;
+    }
+
+    function openLeadModal(id) {
+      const lead = leadsCache.find((l) => l.id === id);
+      if (!lead) return;
+      const body = $("leadDetailBody");
+      const interest = INTEREST_LABELS[lead.interest] || lead.interest || "—";
+      body.innerHTML = `
+        <div class="lead-detail-grid">
+          <div class="lead-detail-row"><span class="k">نام</span><span class="v">${escHtml(lead.fullName)}</span></div>
+          <div class="lead-detail-row"><span class="k">موبایل</span><span class="v" dir="ltr">${escHtml(toFaDigits(lead.phone))}</span></div>
+          <div class="lead-detail-row"><span class="k">شهر</span><span class="v">${escHtml(lead.city || "—")}</span></div>
+          <div class="lead-detail-row"><span class="k">علاقه</span><span class="v">${escHtml(interest)}</span></div>
+          <div class="lead-detail-row"><span class="k">توضیح سایر</span><span class="v">${escHtml(lead.otherDetail || "—")}</span></div>
+          <div class="lead-detail-row"><span class="k">پیام</span><span class="v">${escHtml(lead.message || "—")}</span></div>
+          <div class="lead-detail-row"><span class="k">تاریخ</span><span class="v">${escHtml(formatJalali(lead.createdAt))}</span></div>
+          <div class="lead-detail-row"><span class="k">مدرک</span><span class="v">${
+            lead.document
+              ? `<a href="/uploads/leads/${escHtml(lead.document)}" target="_blank" rel="noopener">مشاهده فایل</a>`
+              : "—"
+          }</span></div>
+        </div>
+        <div class="field"><label>وضعیت</label>
+          <select data-status>
+            ${Object.entries(STATUS_LABELS)
+              .map(([v, label]) => `<option value="${v}" ${lead.status === v ? "selected" : ""}>${label}</option>`)
+              .join("")}
+          </select>
+        </div>
+        <div class="field"><label>توضیحات ادمین</label>
+          <textarea data-notes rows="4">${escHtml(lead.notes || "")}</textarea>
+        </div>
+        <div class="row">
+          <button class="btn gold" type="button" data-save>ذخیره پیگیری</button>
+          <button class="btn ghost" type="button" data-lead-close>بستن</button>
+          <span class="ok" data-save-msg hidden>ذخیره شد</span>
+        </div>
+      `;
+      body.querySelector("[data-save]").addEventListener("click", async () => {
+        const status = body.querySelector("[data-status]").value;
+        const notes = body.querySelector("[data-notes]").value;
+        const res = await fetch(`/api/admin/leads/${lead.id}`, {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ status, notes }),
+        });
+        if (!res.ok) return alert("خطا در ذخیره");
+        const updated = await res.json();
+        const idx = leadsCache.findIndex((l) => l.id === lead.id);
+        if (idx >= 0) leadsCache[idx] = { ...leadsCache[idx], ...updated };
+        const msg = body.querySelector("[data-save-msg]");
+        msg.hidden = false;
+        setTimeout(() => { msg.hidden = true; }, 1600);
+        renderLeadsFilters();
+        renderLeadsTable();
+        renderLeadsDashboard(leadsCache);
+      });
+      body.querySelectorAll("[data-lead-close]").forEach((el) => {
+        el.addEventListener("click", closeLeadModal);
+      });
+      $("leadDetailModal").hidden = false;
+    }
+
+    function leadRowHtml(l) {
+      const interest = INTEREST_LABELS[l.interest] || l.interest || "—";
+      const st = l.status || "new";
+      return `<tr data-id="${escHtml(l.id)}">
+        <td>${escHtml(l.fullName)}</td>
+        <td dir="ltr">${escHtml(toFaDigits(l.phone))}</td>
+        <td>${escHtml(l.city || "—")}</td>
+        <td>${escHtml(interest)}</td>
+        <td><span class="lead-status ${escHtml(st)}">${escHtml(STATUS_LABELS[st] || st)}</span></td>
+        <td>${escHtml(formatJalali(l.createdAt))}</td>
+        <td><button type="button" class="btn sm ghost" data-open>جزئیات</button></td>
+      </tr>`;
+    }
+
+    function leadsTableHtml(rows) {
+      return `
+        <div class="leads-table-wrap">
+          <table class="leads-table">
+            <thead>
+              <tr>
+                <th>نام</th>
+                <th>موبایل</th>
+                <th>شهر</th>
+                <th>علاقه</th>
+                <th>وضعیت</th>
+                <th>تاریخ شمسی</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>${rows.map(leadRowHtml).join("")}</tbody>
+          </table>
+        </div>`;
+    }
+
+    function bindLeadRows(box) {
+      box.querySelectorAll("tbody tr").forEach((row) => {
+        const open = () => openLeadModal(row.dataset.id);
+        row.addEventListener("click", (e) => {
+          if (e.target.closest("button")) return;
+          open();
+        });
+        row.querySelector("[data-open]")?.addEventListener("click", (e) => {
+          e.stopPropagation();
+          open();
+        });
+      });
+    }
+
+    function renderLeadsTable() {
+      const box = $("leadsList");
+      const leads = filteredLeads();
+      if (!leadsCache.length) {
+        box.innerHTML = `<p style="color:#64748b">ثبت‌نامی نیست.</p>`;
+        return;
+      }
+      if (!leads.length) {
+        box.innerHTML = `<p style="color:#64748b">موردی با این وضعیت نیست.</p>`;
+        return;
+      }
+
+      if (leadsStatusFilter !== "all") {
+        const label = STATUS_LABELS[leadsStatusFilter] || leadsStatusFilter;
+        box.innerHTML = `
+          <div class="leads-group">
+            <div class="leads-group-head">
+              <h3><span class="lead-status ${escHtml(leadsStatusFilter)}">${escHtml(label)}</span></h3>
+              <span class="n">${toFaDigits(leads.length)} نفر</span>
+            </div>
+            ${leadsTableHtml(leads)}
+          </div>`;
+        bindLeadRows(box);
+        return;
+      }
+
+      const groups = STATUS_ORDER.map((status) => ({
+        status,
+        label: STATUS_LABELS[status],
+        rows: leadsCache.filter((l) => (l.status || "new") === status),
+      })).filter((g) => g.rows.length);
+
+      box.innerHTML = groups
+        .map(
+          (g) => `
+        <div class="leads-group" data-group="${escHtml(g.status)}">
+          <div class="leads-group-head">
+            <h3><span class="lead-status ${escHtml(g.status)}">${escHtml(g.label)}</span></h3>
+            <span class="n">${toFaDigits(g.rows.length)} نفر</span>
+          </div>
+          ${leadsTableHtml(g.rows)}
+        </div>`
+        )
+        .join("");
+      bindLeadRows(box);
+    }
+
+    async function loadLeads() {
+      const res = await fetch("/api/admin/leads");
+      if (!res.ok) return;
+      leadsCache = await res.json();
+      renderLeadsFilters();
+      renderLeadsDashboard(leadsCache);
+      renderLeadsTable();
+    }
+
+    (() => {
+      const modal = $("leadDetailModal");
+      if (!modal) return;
+      modal.querySelectorAll("[data-lead-close]").forEach((el) => {
+        el.addEventListener("click", closeLeadModal);
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && !modal.hidden) closeLeadModal();
+      });
+    })();
+
+    checkSession();
+  </script>
+</body>
+</html>

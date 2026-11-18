@@ -1,0 +1,23 @@
+{
+  "days": {
+    "2026-11-18": {
+      "views": 3,
+      "unique": 2,
+      "visitors": [
+        "testvisitor01",
+        "v_pxjusksxxcemwlqrvgo"
+      ],
+      "clicks": {
+        "login": 0,
+        "register": 1,
+        "nav": 0,
+        "cta": 0,
+        "blog": 0
+      },
+      "sections": {
+        "text_image-mwdfi36a": 2,
+        "text_image-mwdce557": 2
+      }
+    }
+  }
+}

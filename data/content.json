@@ -1,0 +1,372 @@
+{
+  "site": {
+    "loginUrl": "https://sorenagold.com/user/login/",
+    "loginLabel": "ورود",
+    "defaultFont": "Graphik Arabic",
+    "tickerSpeed": 5,
+    "navItems": [
+      {
+        "label": "ورود",
+        "href": "https://sorenagold.com/user/login/",
+        "font": "Vazirmatn",
+        "size": 13,
+        "color": "#2ec4b6",
+        "variant": "login"
+      },
+      {
+        "label": "ثبت‌نام",
+        "href": "#register-1",
+        "font": "Vazirmatn",
+        "size": 13,
+        "color": "#062a32",
+        "variant": "cta"
+      }
+    ],
+    "tickerItems": [
+      {
+        "text": "✦ خدمتی نو در بازار طلای آب‌شده، با همان نام و اعتباری که سال‌ها می‌شناسید",
+        "color": "#e2b657"
+      },
+      {
+        "text": "✦ نرخ منصفانه، تسویه آنی، امنیت بالا و معاملاتی بی‌دغدغه در سورناگلد",
+        "color": "#2ec4b6"
+      },
+      {
+        "text": "✦ شفافیت در نرخ‌گذاری و سرعت در تحویل؛ ویژگی متمایز معاملات ما",
+        "color": "#e2b657"
+      },
+      {
+        "text": "✦ سورناگلد؛ مرجع تخصصی معاملات طلای آب‌شده     ✦ تماس: ۰۹۱۳۸۴۲۸۲۰۲",
+        "color": "#2ec4b6"
+      }
+    ],
+    "footer": {
+      "brand": "سورناگلد",
+      "tagline": "معاملات طلای آبشده · با اعتبار سایناگلد",
+      "address": "اصفهان، میدان نقش جهان، بازار قهوه‌کاشی‌ها، واحد 8",
+      "phone": "09138428202",
+      "infos": []
+    },
+    "seo": {
+      "title": "سورناگلد | معاملات طلای آبشده",
+      "description": "سورناگلد؛ خرید و فروش طلای آبشده با اعتبار سایناگلد. نرخ شفاف، تسویه سریع و معاملات مطمئن برای مغازه‌داران، کیفی‌ها و بنکداران.",
+      "keywords": "سورناگلد,طلای آبشده,خرید طلا,فروش طلا,سایناگلد,معاملات طلا,اصفهان",
+      "canonicalUrl": "https://sorenagold.com/",
+      "ogImage": ""
+    }
+  },
+  "posts": [
+    {
+      "id": "post-ayar",
+      "slug": "ayar-va-vazn-shafaf",
+      "title": "عیار و وزن شفاف در معاملات طلای آبشده",
+      "excerpt": "چرا ثبت دقیق عیار و وزن، پایه اعتماد در خرید و فروش طلای آبشده است و چطور سورناگلد این مسیر را شفاف نگه می‌دارد.",
+      "body": "در بازار طلای آبشده، هر معامله روی دو عدد ساده اما حیاتی سوار است: عیار و وزن.\n\nاگر این دو مشخصه مبهم باشد، تسویه، اختلاف قیمت و حتی اختلاف حساب بین طرفین معامله پیش می‌آید. به همین دلیل سورناگلد ثبت معامله را بر پایه مشخصات واقعی شمش و آبشده جلو می‌برد تا مسیر از اعلام آمادگی تا تسویه قابل پیگیری بماند.\n\nبرای معامله‌گر و بنکدار، شفافیت عیار یعنی کمتر شدن ریسک و سریع‌تر شدن تصمیم. این همان نقطه‌ای است که اعتبار سایناگلد هم معنا پیدا می‌کند: معامله روی داده‌های روشن، نه حدس و گمان.",
+      "image": "post-cover-ayar.jpg",
+      "published": true,
+      "publishedAt": "2026-11-01"
+    },
+    {
+      "id": "post-speed",
+      "slug": "sorat-dar-moameleh",
+      "title": "سرعت در معامله؛ از اعلام آمادگی تا هماهنگی",
+      "excerpt": "مسیر کوتاه همکاری معاملاتی چطور زمان از دست‌رفته بین اعلام آمادگی و نهایی‌شدن معامله را کم می‌کند.",
+      "body": "در بازار آبشده، فرصت‌ها زود می‌آیند و زود می‌روند. اگر مسیر اعلام آمادگی طولانی باشد، معامله‌گر یا تأمین‌کننده ممکن است فرصت را از دست بدهد.\n\nسورناگلد تلاش می‌کند فاصله بین «اعلام آمادگی» و «هماهنگی خرید/فروش» را کوتاه نگه دارد. فرم ثبت‌نام، پیگیری تیم و اتصال به شبکه معاملاتی روی اعتبار سایناگلد، همه برای همین هدف طراحی شده‌اند.\n\nسرعت بدون شفافیت بی‌معناست؛ برای همین هم‌زمان روی عیار، وزن و پیگیری وضعیت تمرکز می‌کنیم تا سرعت به معنای شتاب بدون کنترل نباشد.",
+      "image": "post-cover-speed.jpg",
+      "published": true,
+      "publishedAt": "2026-11-05"
+    },
+    {
+      "id": "post-network",
+      "slug": "shabake-ghabel-eteka",
+      "title": "شبکه قابل اتکا برای معامله‌گران و بنکداران",
+      "excerpt": "اتصال معامله‌گران، بنکداران و تأمین‌کنندگان روی یک بستر قابل پیگیری چه مزیتی برای بازار طلای آبشده دارد.",
+      "body": "بازار طلای آبشده فقط قیمت نیست؛ شبکه اعتماد است. معامله‌گر به تأمین‌کننده نیاز دارد، بنکدار به مسیر تسویه، و همه به یک مرجع قابل اتکا.\n\nسورناگلد این شبکه را روی اعتبار سایناگلد بنا کرده تا طرفین معامله در یک مسیر مشترک قرار بگیرند: اعلام آمادگی، هماهنگی، و پیگیری.\n\nهرچه شبکه شفاف‌تر باشد، اصطکاک کمتر و تکرار معامله بیشتر می‌شود. مقالات این بخش هم برای همین‌اند؛ توضیح ساده همان چیزهایی که در عمل برای معامله‌گر مهم است.",
+      "image": "post-cover-network.jpg",
+      "published": true,
+      "publishedAt": "2026-11-08"
+    }
+  ],
+  "media": [
+    {
+      "id": "0e591f9d-6cdc-4c36-a942-e857aa881783",
+      "file": "1794480781736-49953544.png",
+      "createdAt": "2026-11-12T10:53:01.814Z"
+    },
+    {
+      "id": "6b527a0d-f8c6-471c-9095-1c4fa7b1fbcd",
+      "file": "1794293910470-67f2741d.png",
+      "createdAt": "2026-11-10T06:58:30.471Z"
+    }
+  ],
+  "sections": [
+    {
+      "id": "hero-1",
+      "type": "hero",
+      "visible": true,
+      "style": {
+        "paddingTop": 112,
+        "paddingBottom": 160,
+        "paddingX": 16,
+        "minHeight": 60,
+        "gap": 20,
+        "maxWidth": 1152,
+        "titleSize": 88,
+        "textSize": 20,
+        "boxWidth": 100,
+        "titleFont": "Graphik Arabic",
+        "bodyFont": "Graphik Arabic",
+        "buttonFont": "Graphik Arabic",
+        "textAlign": "right"
+      },
+      "data": {
+        "kicker": " ",
+        "headline": "سورناگلد",
+        "subheadline": "خرید و فروش طلای آبشده با اعتبار سایناگلد.",
+        "ctaLabel": "شروع معاملات",
+        "ctaHref": "#register-1",
+        "fonts": {
+          "kicker": "Graphik Arabic",
+          "headline": "Graphik Arabic",
+          "subheadline": "Graphik Arabic",
+          "ctaLabel": "Graphik Arabic"
+        },
+        "colors": {}
+      }
+    },
+    {
+      "id": "register-1",
+      "type": "register",
+      "visible": true,
+      "style": {
+        "paddingTop": 80,
+        "paddingBottom": 96,
+        "paddingX": 24,
+        "minHeight": 0,
+        "gap": 28,
+        "maxWidth": 1080,
+        "titleSize": 36,
+        "textSize": 17,
+        "boxWidth": 100,
+        "titleFont": "Graphik Arabic",
+        "bodyFont": "Graphik Arabic",
+        "buttonFont": "Graphik Arabic",
+        "textAlign": "justify"
+      },
+      "data": {
+        "eyebrow": "",
+        "title": "سورناگلد",
+        "body": "اگر مغازه‌دار، بنکدار یا همکار صنف طلا هستید، فرم را تکمیل کنید.\nما در سریع‌ترین زمان ممکن با شما تماس خواهیم گرفت.",
+        "successTitle": "درخواست شما ثبت شد",
+        "successBody": "کارشناسان سورناگلد در اسرع وقت با شما تماس می‌گیرند.",
+        "successAsk": "تمایل دارید از بنکداری هوشمند سایناگلد نیز دیدن کنید؟",
+        "successLinkLabel": "مشاهده سایناگلد",
+        "successLinkUrl": "https://sainagold.com",
+        "fonts": {
+          "eyebrow": "Vazirmatn",
+          "title": "Vazirmatn",
+          "body": "Vazirmatn",
+          "form": "Vazirmatn"
+        },
+        "formBg": "#ffffff",
+        "formText": "#1a1a1a",
+        "formAccent": "#2ec4b6",
+        "formButtonBg": "#2ec4b6",
+        "formButtonText": "#062a32",
+        "colors": {}
+      }
+    },
+    {
+      "id": "text_image-mwdfi36a",
+      "type": "text_image",
+      "visible": true,
+      "style": {
+        "paddingTop": 64,
+        "paddingBottom": 64,
+        "paddingX": 16,
+        "minHeight": 280,
+        "gap": 36,
+        "maxWidth": 1152,
+        "titleSize": 32,
+        "textSize": 17,
+        "boxWidth": 100,
+        "titleFont": "Graphik Arabic",
+        "bodyFont": "Graphik Arabic",
+        "buttonFont": "Graphik Arabic",
+        "titleColor": "",
+        "bodyColor": "",
+        "buttonColor": "",
+        "textAlign": "justify"
+      },
+      "data": {
+        "title": "سورناگلد میزبان معاملات طلای آبشده شما",
+        "body": "اگر به دنبال خرید و فروش طلای آب‌شده با نرخ منصفانه، اصالت تضمین‌شده و تسویه آنی هستید، «سورناگلد» دقیقاً برای همین هدف شکل گرفته است. ما تمام تجربه، تخصص و خوش‌نامی تیم «سایناگلد» را در این مجموعه گرد آورده‌ایم تا معاملاتی امن، شفاف و بدون دغدغه را تجربه کنید. با پشتوانه‌ای که سال‌ها به آن اعتماد کرده‌اید، همین امروز قدم در مسیر سرمایه‌گذاری هوشمندانه در طلا بگذارید.",
+        "mediaId": "0e591f9d-6cdc-4c36-a942-e857aa881783",
+        "imageSide": "right",
+        "linkLabel": "",
+        "linkHref": "",
+        "fonts": {
+          "title": "Graphik Arabic",
+          "body": "Graphik Arabic",
+          "linkLabel": "Graphik Arabic"
+        },
+        "colors": {}
+      }
+    },
+    {
+      "id": "text_image-mwdce557",
+      "type": "text_image",
+      "visible": true,
+      "style": {
+        "paddingTop": 64,
+        "paddingBottom": 64,
+        "paddingX": 16,
+        "minHeight": 280,
+        "gap": 36,
+        "maxWidth": 1152,
+        "titleSize": 32,
+        "textSize": 17,
+        "boxWidth": 100,
+        "titleFont": "Graphik Arabic",
+        "bodyFont": "Graphik Arabic",
+        "buttonFont": "Graphik Arabic",
+        "titleColor": "",
+        "bodyColor": "",
+        "buttonColor": "",
+        "textAlign": "justify"
+      },
+      "data": {
+        "title": "قدرت گرفته از سایناگلد",
+        "body": "بیش از ۸۰ سال است که بنکداری سایناگلد بر پایه اصالت، صداقت و درستی در بازار طلای اصفهان و ایران فعالیت می‌کند. تنوع بالای محصولات بنکداری، اجرت مناسب و شفاف، همکاری با برندهای معتبر طلای کشور و امکان مرجوعی سایناگلد باعث شده تا بستری ساده و امن برای تأمین هوشمندانه طلا و جواهرات ایجاد شود.\n\nبه پشتوانه سایناگلد، مسیر معاملات طلای آبشده را با سورناگلد هموار کرده‌ایم.\nاز اعلام آمادگی تا تسویه، به‌صورت شفاف و قابل پیگیری.",
+        "mediaId": "6b527a0d-f8c6-471c-9095-1c4fa7b1fbcd",
+        "imageSide": "left",
+        "linkLabel": "",
+        "linkHref": "",
+        "fonts": {
+          "title": "Graphik Arabic",
+          "body": "Graphik Arabic",
+          "linkLabel": "Graphik Arabic"
+        },
+        "colors": {}
+      }
+    },
+    {
+      "id": "features-1",
+      "type": "features",
+      "visible": true,
+      "style": {
+        "paddingTop": 80,
+        "paddingBottom": 80,
+        "paddingX": 16,
+        "minHeight": 0,
+        "gap": 48,
+        "maxWidth": 1152,
+        "titleSize": 36,
+        "textSize": 16,
+        "boxWidth": 100,
+        "titleFont": "Graphik Arabic",
+        "bodyFont": "Graphik Arabic",
+        "buttonFont": "Graphik Arabic",
+        "textAlign": "right"
+      },
+      "data": {
+        "title": "چرا سورناگلد؟",
+        "items": [
+          {
+            "title": "بهره‌مندی از شبکه‌ای پایدار و قابل اعتماد",
+            "body": "دسترسی مداوم با پشتوانه قدمت ۸۰ ساله بنکداری سایناگلد، ویژه معامله‌گران، طلافروشان و بنکداران.",
+            "titleFont": "Shabnam",
+            "bodyFont": "Shabnam",
+            "bodyColor": "#d5ccae",
+            "bodyAlign": "justify"
+          },
+          {
+            "title": "نمایش قیمت لحظه‌ای",
+            "body": "دسترسی به قیمت‌های به‌روز طلا بر اساس آخرین نرخ لحظه‌ای بازار. ",
+            "titleFont": "Shabnam",
+            "bodyFont": "Shabnam",
+            "bodyColor": "#d5ccae",
+            "bodyAlign": "justify"
+          },
+          {
+            "title": "سرعت بالا در معامله",
+            "body": "انجام سریع معاملات و بدون اتلاف وقت؛ با دسترسی آسان به فرایند خرید و ثبت سفارش طلای آبشده.",
+            "titleFont": "Shabnam",
+            "bodyFont": "Shabnam",
+            "bodyColor": "#d5ccae",
+            "bodyAlign": "justify"
+          },
+          {
+            "title": "حسابداری سریع، دقیق و شفاف",
+            "body": "مدیریت و ثبت دقیق و سریع معاملات بر پایه مشخصات واقعی شمش و آبشده، بدون ابهام در تسویه.",
+            "titleFont": "Shabnam",
+            "bodyFont": "Shabnam",
+            "bodyColor": "#d5ccae",
+            "bodyAlign": "justify"
+          }
+        ],
+        "fonts": {
+          "title": "Estedad"
+        },
+        "colors": {
+          "title": "#ceab36"
+        }
+      }
+    },
+    {
+      "id": "blog-1",
+      "type": "blog",
+      "visible": true,
+      "style": {
+        "paddingTop": 80,
+        "paddingBottom": 80,
+        "paddingX": 16,
+        "minHeight": 0,
+        "gap": 28,
+        "maxWidth": 1152,
+        "titleSize": 36,
+        "textSize": 16,
+        "boxWidth": 100,
+        "titleFont": "Graphik Arabic",
+        "bodyFont": "Graphik Arabic",
+        "buttonFont": "Graphik Arabic"
+      },
+      "data": {
+        "title": "مجله سورناگلد",
+        "subtitle": "",
+        "limit": 3,
+        "moreLabel": "همه مقالات",
+        "moreHref": "/blog",
+        "fonts": {
+          "title": "Graphik Arabic",
+          "subtitle": "Graphik Arabic",
+          "moreLabel": "Graphik Arabic"
+        }
+      }
+    },
+    {
+      "id": "cta-1",
+      "type": "cta",
+      "visible": true,
+      "style": {
+        "paddingTop": 64,
+        "paddingBottom": 64,
+        "paddingX": 16,
+        "minHeight": 0,
+        "gap": 16,
+        "maxWidth": 1152,
+        "titleSize": 36,
+        "textSize": 17,
+        "boxWidth": 100
+      },
+      "data": {
+        "title": "برای ورود به معاملات آبشده آماده‌اید؟",
+        "body": "کافی‌ست اعلام آمادگی کنید تا تیم سورناگلد مسیر همکاری معاملاتی را با شما هماهنگ کند.",
+        "buttonLabel": "ثبت اعلام آمادگی",
+        "buttonHref": "#register-1",
+        "fonts": {}
+      }
+    }
+  ],
+  "posters": []
+}
